@@ -155,7 +155,7 @@
   }
   
   .card-service {
-    @apply bg-gradient-to-br from-white to-surface border border-border rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group;
+    @apply bg-gradient-to-br from-white to-surface border border-border rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2;
   }
   
   /* Professional Sections */

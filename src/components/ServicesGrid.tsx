@@ -65,7 +65,7 @@ const ServicesGrid = () => {
           {services.map((service, index) => (
             <Card 
               key={service.title} 
-              className="card-service animate-fade-in" 
+              className="card-service group animate-fade-in" 
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="space-y-4">
