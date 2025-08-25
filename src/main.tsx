@@ -1,39 +1,36 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { HelmetProvider } from 'react-helmet-async'
+// Ultra-simple test - no imports, just basic JavaScript
+console.log('BASIC TEST: Script is running');
 
-// Add basic error handling and debugging
-try {
-  console.log('Starting app initialization...');
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('BASIC TEST: DOM loaded');
   
-  const rootElement = document.getElementById("root");
-  if (!rootElement) {
-    throw new Error('Root element not found');
+  const root = document.getElementById('root');
+  if (root) {
+    console.log('BASIC TEST: Root found');
+    root.innerHTML = `
+      <div style="padding: 20px; font-family: Arial, sans-serif; background: #f0f0f0; min-height: 100vh;">
+        <h1 style="color: #333;">🟢 BASIC TEST SUCCESS</h1>
+        <p style="color: #666;">This proves JavaScript is working!</p>
+        <p style="color: #666;">Time: ${new Date().toLocaleString()}</p>
+      </div>
+    `;
+  } else {
+    console.error('BASIC TEST: Root not found');
   }
-  
-  console.log('Root element found, creating React root...');
-  const root = createRoot(rootElement);
-  
-  console.log('Rendering app...');
-  root.render(
-    <StrictMode>
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
-    </StrictMode>
-  );
-  
-  console.log('App render complete');
-} catch (error) {
-  console.error('Error initializing app:', error);
-  // Fallback display
-  document.body.innerHTML = `
-    <div style="padding: 20px; font-family: sans-serif;">
-      <h1 style="color: red;">App Initialization Error</h1>
-      <p>Error: ${error.message}</p>
-      <p>Please check the console for more details.</p>
-    </div>
-  `;
+});
+
+// Fallback if DOM is already loaded
+if (document.readyState === 'loading') {
+  console.log('BASIC TEST: Waiting for DOM...');
+} else {
+  console.log('BASIC TEST: DOM already ready, executing immediately');
+  const root = document.getElementById('root');
+  if (root) {
+    root.innerHTML = `
+      <div style="padding: 20px; font-family: Arial, sans-serif; background: #e8f4f8;">
+        <h1 style="color: #2563eb;">🔵 IMMEDIATE TEST SUCCESS</h1>
+        <p>JavaScript executed immediately!</p>
+      </div>
+    `;
+  }
 }
