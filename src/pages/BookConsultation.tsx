@@ -16,6 +16,7 @@ import {
   Building,
   TrendingUp
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -215,10 +216,10 @@ const BookConsultation = () => {
                       </a>
                     </Button>
                     <Button variant="outline" className="btn-outline flex-1" asChild>
-                      <a href="/contact">
+                      <Link to="/contact">
                         <MessageCircle className="w-4 h-4 mr-2" />
                         Send Message
-                      </a>
+                      </Link>
                     </Button>
                   </div>
                 </Card>
@@ -359,10 +360,10 @@ const BookConsultation = () => {
                   
                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button variant="outline" className="btn-outline" asChild>
-                      <a href="/contact">
+                      <Link to="/contact">
                         <MessageCircle className="w-4 h-4 mr-2" />
                         Contact Support
-                      </a>
+                      </Link>
                     </Button>
                     <Button variant="outline" className="btn-outline" asChild>
                       <a href="tel:(949) 431-0469">

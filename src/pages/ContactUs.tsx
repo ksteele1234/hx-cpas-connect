@@ -17,8 +17,9 @@ import {
   HelpCircle,
   Navigation,
   CheckCircle
-} from "lucide-react";
+ } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -135,10 +136,10 @@ const ContactUs = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="btn-primary" asChild>
-                  <a href="/book-consultation">
+                  <Link to="/book-consultation">
                     <Calendar className="w-5 h-5 mr-2" />
                     Book a Consultation
-                  </a>
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="btn-outline" asChild>
                   <a href="tel:(949) 431-0469">
@@ -282,11 +283,11 @@ const ContactUs = () => {
                       className="w-full btn-primary group"
                       asChild
                     >
-                      <a href="/book-consultation">
+                      <Link to="/book-consultation">
                         <Calendar className="w-5 h-5 mr-2" />
                         Book a Consultation
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </a>
+                      </Link>
                     </Button>
                     
                     <Button 
@@ -295,11 +296,11 @@ const ContactUs = () => {
                       className="w-full btn-outline group"
                       asChild
                     >
-                      <a href="/faq">
+                      <Link to="/faq">
                         <HelpCircle className="w-5 h-5 mr-2" />
                         Browse FAQs
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </a>
+                      </Link>
                     </Button>
                     
                     <Button 

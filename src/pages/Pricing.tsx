@@ -18,6 +18,7 @@ import {
   MessageCircle
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -329,10 +330,10 @@ const Pricing = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="btn-primary" asChild>
-                  <a href="/book-consultation">
+                  <Link to="/book-consultation">
                     <Calendar className="w-5 h-5 mr-2" />
                     Book a Consultation
-                  </a>
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="btn-outline" asChild>
                   <a href="tel:(949) 431-0469">
@@ -454,9 +455,9 @@ const Pricing = () => {
                     className={`w-full ${pkg.color === "primary" ? 'btn-primary' : 'btn-outline'}`}
                     asChild
                   >
-                    <a href="/book-consultation">
+                    <Link to="/book-consultation">
                       {pkg.color === "primary" ? 'Get Started' : 'Learn More'}
-                    </a>
+                    </Link>
                   </Button>
                 </Card>
               ))}
@@ -571,9 +572,9 @@ const Pricing = () => {
                     className={`w-full ${pkg.color === "primary" ? 'btn-primary' : 'btn-outline'}`}
                     asChild
                   >
-                    <a href="/book-consultation">
+                    <Link to="/book-consultation">
                       {pkg.color === "primary" ? 'Get Started' : 'Learn More'}
-                    </a>
+                    </Link>
                   </Button>
                 </Card>
               ))}
@@ -643,18 +644,18 @@ const Pricing = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
                 <Button size="lg" variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group" asChild>
-                  <a href="/book-consultation">
+                  <Link to="/book-consultation">
                     <Calendar className="w-5 h-5 mr-2" />
                     Book a Consultation
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary group" asChild>
-                  <a href="/contact">
+                  <Link to="/contact">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Contact Us
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
               
