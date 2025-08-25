@@ -357,12 +357,7 @@ const BookConsultation = () => {
                     or contact us with any questions about the consultation process.
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button variant="outline" className="btn-outline group">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Reschedule Appointment
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button variant="outline" className="btn-outline" asChild>
                       <a href="/contact">
                         <MessageCircle className="w-4 h-4 mr-2" />
