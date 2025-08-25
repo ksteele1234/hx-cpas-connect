@@ -51,10 +51,8 @@ const ScrollToTop = () => {
   return null;
 };
 
-const App = () => {
-  console.log('App.tsx: Component rendering');
-  return (
-    <QueryClientProvider client={queryClient}>
+const App = () => (
+  <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -101,7 +99,6 @@ const App = () => {
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
-  );
-};
+);
 
 export default App;
