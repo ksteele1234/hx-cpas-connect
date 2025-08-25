@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -153,7 +154,14 @@ const FAQ = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Frequently Asked Questions | CPA Services FAQ | HRX CPAs Irvine</title>
+        <meta name="description" content="Get answers to common questions about our CPA services, pricing, business packages, personal tax services, and CFO consulting. Learn more about HRX CPAs." />
+        <meta name="keywords" content="CPA FAQ Irvine, tax services questions, CFO consulting FAQ, bookkeeping questions, business tax FAQ Orange County" />
+        <link rel="canonical" href="https://hrxcpas.com/faq" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -298,7 +306,8 @@ const FAQ = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

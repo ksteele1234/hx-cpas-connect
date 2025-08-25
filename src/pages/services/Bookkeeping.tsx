@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -28,7 +29,14 @@ import { Link } from "react-router-dom";
 
 const Bookkeeping = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Bookkeeping Services | Monthly Financials in 10 Days | HRX CPAs Irvine</title>
+        <meta name="description" content="Professional bookkeeping services for businesses: monthly financials within 10 days, bank reconciliation, financial statements & sales tax filing in Orange County." />
+        <meta name="keywords" content="bookkeeping services Irvine, monthly financial statements, business bookkeeping Orange County, QuickBooks setup, sales tax filing" />
+        <link rel="canonical" href="https://hrxcpas.com/services/bookkeeping" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -354,7 +362,8 @@ const Bookkeeping = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -276,7 +277,14 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>CPA Services Pricing | Business & Personal Tax Packages | HRX CPAs Irvine</title>
+        <meta name="description" content="Transparent CPA pricing: Business services from $500/month, personal tax from $119/month. Bookkeeping, CFO services, tax planning & estate coordination." />
+        <meta name="keywords" content="CPA pricing Irvine, tax preparation cost, CFO services pricing, bookkeeping rates Orange County, business tax cost" />
+        <link rel="canonical" href="https://hrxcpas.com/pricing" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -659,7 +667,8 @@ const Pricing = () => {
       </main>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

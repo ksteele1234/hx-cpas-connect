@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -70,7 +71,14 @@ const BusinessServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Business Services | CFO Consulting, Tax Planning & Bookkeeping | HRX CPAs Irvine</title>
+        <meta name="description" content="Comprehensive business services for $1M-$10M revenue companies: CFO consulting, tax planning, bookkeeping, exit planning & business valuations in Orange County." />
+        <meta name="keywords" content="business CFO services Irvine, business tax planning Orange County, bookkeeping services Irvine, exit planning CPA, business valuation services" />
+        <link rel="canonical" href="https://hrxcpas.com/business-services" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -215,7 +223,8 @@ const BusinessServices = () => {
       </main>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

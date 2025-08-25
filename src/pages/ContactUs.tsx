@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -75,7 +76,14 @@ const ContactUs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Contact HRX CPAs | Schedule Consultation | Irvine CPA Firm | (949) 431-0469</title>
+        <meta name="description" content="Contact HRX CPAs in Irvine for business tax planning, CFO services & personal tax preparation. Call (949) 431-0469 or schedule online consultation today." />
+        <meta name="keywords" content="contact HRX CPAs, Irvine CPA consultation, schedule CPA appointment, tax planning consultation Irvine, CFO services contact" />
+        <link rel="canonical" href="https://hrxcpas.com/contact" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -368,9 +376,9 @@ const ContactUs = () => {
           </div>
         </section>
       </main>
-
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

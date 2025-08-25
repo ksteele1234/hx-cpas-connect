@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -13,7 +14,14 @@ import FinalCTA from "@/components/FinalCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>HRX CPAs | Irvine CPA Firm | Tax Planning & CFO Services</title>
+        <meta name="description" content="Expert CPA firm in Irvine serving businesses $1M-$10M revenue & high-net-worth families. Tax planning, CFO consulting, bookkeeping & exit planning in Orange County." />
+        <meta name="keywords" content="CPA firm Irvine, tax planning Irvine, CFO services Irvine, business accountant Irvine, virtual CFO Orange County, exit planning CPA" />
+        <link rel="canonical" href="https://hrxcpas.com/" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main>
         <HeroSection />
@@ -27,8 +35,9 @@ const Index = () => {
         <LocationSection />
         <FinalCTA />
       </main>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -29,7 +30,14 @@ import { Link } from "react-router-dom";
 
 const TaxPlanningPrep = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Strategic Tax Planning & Preparation | Reduce Tax Burden 15-30% | HRX CPAs Irvine</title>
+        <meta name="description" content="Proactive tax planning services: quarterly sessions, entity optimization, credit maximization. Save 15-30% on taxes with strategic year-round planning in Orange County." />
+        <meta name="keywords" content="tax planning Irvine, strategic tax preparation, business tax optimization, entity structure planning, R&D tax credits Orange County" />
+        <link rel="canonical" href="https://hrxcpas.com/services/tax-planning-prep" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -348,7 +356,8 @@ const TaxPlanningPrep = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

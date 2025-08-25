@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +23,14 @@ import Footer from "@/components/Footer";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>About HRX CPAs | Hiren Parmar CPA, CVA, CEPA | Irvine Accounting Firm</title>
+        <meta name="description" content="Meet Hiren Parmar, CPA, CVA, CEPA, founder of HRX CPAs. 15+ years serving Orange County businesses with strategic tax planning, CFO services, and exit planning expertise." />
+        <meta name="keywords" content="Hiren Parmar CPA, HRX CPAs about, Irvine CPA firm history, certified valuation analyst, exit planning advisor" />
+        <link rel="canonical" href="https://hrxcpas.com/about" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -425,7 +433,8 @@ const About = () => {
       </main>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
