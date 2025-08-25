@@ -47,12 +47,12 @@ const Sitemap = () => {
   ];
 
   const blogPosts = [
-    { title: "2025 Tax Planning Strategies for High-Income Professionals", path: "/blog/1" },
-    { title: "R&D Tax Credits: Hidden Opportunities for Tech Companies", path: "/blog/2" },
-    { title: "Estate Planning for Multi-Generational Families", path: "/blog/3" },
-    { title: "Key Tax Law Changes for 2025: What Business Owners Need to Know", path: "/blog/4" },
-    { title: "RSU Tax Planning: Timing Your Stock Vesting for Maximum Benefit", path: "/blog/5" },
-    { title: "Small Business Tax Deductions You Might Be Missing", path: "/blog/6" }
+    { title: "2025 Tax Planning Strategies for High-Income Professionals", path: "/blog/2025-tax-planning-strategies-high-income-professionals" },
+    { title: "R&D Tax Credits: Hidden Opportunities for Tech Companies", path: "/blog/rd-tax-credits-hidden-opportunities-tech-companies" },
+    { title: "Estate Planning for Multi-Generational Families", path: "/blog/estate-planning-multi-generational-families" },
+    { title: "Key Tax Law Changes for 2025: What Business Owners Need to Know", path: "/blog/key-tax-law-changes-2025-business-owners" },
+    { title: "RSU Tax Planning: Timing Your Stock Vesting for Maximum Benefit", path: "/blog/rsu-tax-planning-timing-stock-vesting-maximum-benefit" },
+    { title: "Small Business Tax Deductions You Might Be Missing", path: "/blog/small-business-tax-deductions-you-might-be-missing" }
   ];
 
   return (
