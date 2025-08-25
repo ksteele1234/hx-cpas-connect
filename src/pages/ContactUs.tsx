@@ -105,6 +105,9 @@ const ContactUs = () => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="author" content="HRX CPAs" />
         <meta name="theme-color" content="#1e40af" />
+        
+        {/* Go High Level Form Script */}
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
@@ -161,7 +164,7 @@ const ContactUs = () => {
                 <Card className="card-elegant overflow-hidden">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
-                    style={{width: '100%', height: '716px', border: 'none', borderRadius: '15px'}}
+                    style={{width: '100%', height: '100%', border: 'none', borderRadius: '15px'}}
                     id="inline-kLopwZyWToh3Mfk6dT32" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
@@ -171,12 +174,11 @@ const ContactUs = () => {
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
                     data-form-name="Contact Us Form (on the website)"
-                    data-height="716"
+                    data-height="undefined"
                     data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
                     data-form-id="kLopwZyWToh3Mfk6dT32"
                     title="Contact Us Form (on the website)"
                   ></iframe>
-                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </Card>
               </div>
 
