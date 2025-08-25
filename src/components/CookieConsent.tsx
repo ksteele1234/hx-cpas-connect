@@ -170,11 +170,14 @@ const CookieSettings = ({
           <div className="ml-4">
             <button
               onClick={() => setSettings(prev => ({ ...prev, analytics: !prev.analytics }))}
-              className={`w-12 h-6 rounded-full flex items-center px-1 transition-colors ${
+              className={`w-12 h-6 rounded-full flex items-center px-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                 settings.analytics 
                   ? 'bg-primary justify-end' 
                   : 'bg-border justify-start'
               }`}
+              role="switch"
+              aria-checked={settings.analytics}
+              aria-label="Toggle analytics cookies"
             >
               <div className="w-4 h-4 bg-white rounded-full"></div>
             </button>

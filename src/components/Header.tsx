@@ -87,7 +87,9 @@ const Header = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-md text-foreground hover:text-primary transition-colors"
+                className="p-2 rounded-md text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                aria-expanded={mobileMenuOpen}
+                aria-label={mobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
               >
                 {mobileMenuOpen ? (
                   <X className="w-6 h-6" />
