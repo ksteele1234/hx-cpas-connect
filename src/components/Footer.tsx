@@ -51,7 +51,7 @@ const Footer = () => {
               {/* Social Media */}
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://www.linkedin.com/company/hrx-cpas"
+                  href="https://www.linkedin.com/in/hiren-parmar-cpa-cva-cepa-b5567367/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary-foreground/10 hover:bg-secondary rounded-lg flex items-center justify-center transition-colors group"
@@ -60,7 +60,7 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5 text-primary-foreground group-hover:text-white" />
                 </a>
                 <a
-                  href="https://www.facebook.com/hrxcpas"
+                  href="https://facebook.com/hrxcpas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary-foreground/10 hover:bg-secondary rounded-lg flex items-center justify-center transition-colors group"

@@ -109,8 +109,8 @@ const Index = () => {
               "reviewCount": "50+"
             },
             "sameAs": [
-              "https://www.linkedin.com/company/hrx-cpas",
-              "https://www.facebook.com/hrxcpas"
+              "https://www.linkedin.com/in/hiren-parmar-cpa-cva-cepa-b5567367/",
+              "https://facebook.com/hrxcpas"
             ]
           })}
         </script>
