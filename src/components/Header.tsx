@@ -36,6 +36,9 @@ const Header = () => {
   const navigationLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+  ];
+
+  const endNavigationLinks = [
     { name: "Pricing", href: "/pricing" },
     { name: "Contact Us", href: "/contact" },
   ];
@@ -58,8 +61,8 @@ const Header = () => {
           </div>
           <Button 
             size="sm" 
-            variant="secondary"
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             asChild
           >
             <Link to="/book-consultation">Book a Consultation</Link>
@@ -140,11 +143,23 @@ const Header = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+
+              {/* End Navigation Links */}
+              {endNavigationLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
             </nav>
 
             {/* Client Portal Button (Desktop) */}
             <div className="hidden lg:block">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" disabled>
+              <Button variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" disabled>
                 Client Portal
               </Button>
             </div>
@@ -233,17 +248,30 @@ const Header = () => {
                   </div>
                 )}
               </div>
+
+              {/* End Navigation Links (Mobile) */}
+              {endNavigationLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block text-foreground hover:text-primary font-medium transition-colors duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              
               <div className="pt-4 border-t border-border space-y-3">
                 <Button 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  variant="secondary" 
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                   disabled
                 >
                   Client Portal
                 </Button>
                 <Button 
-                  variant="secondary"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                  variant="outline"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   asChild
                 >
                   <Link to="/book-consultation">Book a Consultation</Link>
