@@ -297,13 +297,17 @@ const Pricing = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-primary">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book a Consultation
+                <Button size="lg" className="btn-primary" asChild>
+                  <a href="/book-consultation">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book a Consultation
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="btn-outline">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (949) 431-0469
+                <Button size="lg" variant="outline" className="btn-outline" asChild>
+                  <a href="tel:+1-949-455-4842">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (949) 455-4842
+                  </a>
                 </Button>
               </div>
             </div>
@@ -417,8 +421,11 @@ const Pricing = () => {
                   
                   <Button 
                     className={`w-full ${pkg.color === "primary" ? 'btn-primary' : 'btn-outline'}`}
+                    asChild
                   >
-                    {pkg.color === "primary" ? 'Get Started' : 'Learn More'}
+                    <a href="/book-consultation">
+                      {pkg.color === "primary" ? 'Get Started' : 'Learn More'}
+                    </a>
                   </Button>
                 </Card>
               ))}
@@ -531,8 +538,11 @@ const Pricing = () => {
                   
                   <Button 
                     className={`w-full ${pkg.color === "primary" ? 'btn-primary' : 'btn-outline'}`}
+                    asChild
                   >
-                    {pkg.color === "primary" ? 'Get Started' : 'Learn More'}
+                    <a href="/book-consultation">
+                      {pkg.color === "primary" ? 'Get Started' : 'Learn More'}
+                    </a>
                   </Button>
                 </Card>
               ))}
@@ -601,15 +611,19 @@ const Pricing = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <Button size="lg" variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book a Consultation
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group" asChild>
+                  <a href="/book-consultation">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book a Consultation
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary group">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Contact Us
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary group" asChild>
+                  <a href="/contact">
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Contact Us
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
               </div>
               
