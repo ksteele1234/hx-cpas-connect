@@ -1,17 +1,41 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import hrxLogo from "@/assets/hrx-logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [businessDropdownOpen, setBusinessDropdownOpen] = useState(false);
+  const [personalDropdownOpen, setPersonalDropdownOpen] = useState(false);
+
+  const businessServices = [
+    { name: "Tax Planning & Preparation", href: "/services/tax-planning-prep" },
+    { name: "Bookkeeping", href: "/services/bookkeeping" },
+    { name: "CFO Consulting", href: "/services/cfo-consulting" },
+    { name: "Full Service Accounting & Payroll", href: "/services/full-service-accounting-payroll" },
+    { name: "Business Valuation", href: "/services/business-valuation" },
+    { name: "Exit Planning", href: "/services/exit-planning" },
+    { name: "Buyer Due Diligence", href: "/services/buyer-due-diligence" },
+    { name: "Estate Planning Coordination", href: "/services/estate-planning-coordination" },
+  ];
+
+  const personalServices = [
+    { name: "Individual Tax Preparation", href: "/services/individual-tax-preparation" },
+    { name: "RSU & Equity Planning", href: "/services/rsu-equity-planning" },
+    { name: "Rental & K-1 Support", href: "/services/rental-k1-support" },
+    { name: "Personal Estate Planning", href: "/services/personal-estate-planning" },
+  ];
 
   const navigationLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Business Services", href: "/business-services" },
-    { name: "Personal & Family Services", href: "/personal-services" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contact Us", href: "/contact" },
   ];
@@ -74,6 +98,48 @@ const Header = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
+              
+              {/* Business Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  Business Services
+                  <ChevronDown className="w-4 h-4" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border">
+                  {businessServices.map((service) => (
+                    <DropdownMenuItem key={service.name} asChild>
+                      <Link 
+                        to={service.href}
+                        className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
+                      >
+                        {service.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {/* Personal Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  Personal & Family Services
+                  <ChevronDown className="w-4 h-4" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border">
+                  {personalServices.map((service) => (
+                    <DropdownMenuItem key={service.name} asChild>
+                      <Link 
+                        to={service.href}
+                        className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
+                      >
+                        {service.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
 
             {/* Client Portal Button (Desktop) */}
@@ -115,6 +181,58 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
+              
+              {/* Mobile Business Services */}
+              <div className="space-y-2">
+                <button
+                  onClick={() => setBusinessDropdownOpen(!businessDropdownOpen)}
+                  className="flex items-center justify-between w-full text-foreground hover:text-primary font-medium transition-colors duration-200"
+                  aria-expanded={businessDropdownOpen}
+                >
+                  Business Services
+                  <ChevronDown className={`w-4 h-4 transition-transform ${businessDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {businessDropdownOpen && (
+                  <div className="pl-4 space-y-2">
+                    {businessServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Personal Services */}
+              <div className="space-y-2">
+                <button
+                  onClick={() => setPersonalDropdownOpen(!personalDropdownOpen)}
+                  className="flex items-center justify-between w-full text-foreground hover:text-primary font-medium transition-colors duration-200"
+                  aria-expanded={personalDropdownOpen}
+                >
+                  Personal & Family Services
+                  <ChevronDown className={`w-4 h-4 transition-transform ${personalDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {personalDropdownOpen && (
+                  <div className="pl-4 space-y-2">
+                    {personalServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
               <div className="pt-4 border-t border-border space-y-3">
                 <Button 
                   variant="outline" 
