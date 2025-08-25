@@ -5,37 +5,43 @@ import App from './App.tsx'
 import './index.css'
 import { HelmetProvider } from 'react-helmet-async'
 
-console.log('🚀 Starting React app...');
-console.log('Root element:', document.getElementById("root"));
-console.log('📄 Document scripts:', Array.from(document.scripts).map(s => ({
-  src: s.src, 
-  type: s.type, 
-  textLength: s.textContent?.length || 0,
-  isBootstrap: s.type === 'application/json' && s.textContent && s.textContent.length > 100
-})));
-console.log('🔍 Checking for bootstrap data...');
+// Wait for DOM to be ready
+function initializeApp() {
+  console.log('🚀 Initializing React app...');
+  console.log('Document ready state:', document.readyState);
+  
+  const rootElement = document.getElementById("root");
+  console.log('Root element found:', !!rootElement);
+  console.log('Root element:', rootElement);
+  
+  if (!rootElement) {
+    console.error('❌ Root element not found!');
+    // Try to create the root element if it doesn't exist
+    const newRoot = document.createElement('div');
+    newRoot.id = 'root';
+    document.body.appendChild(newRoot);
+    console.log('✅ Created new root element');
+    return initializeApp(); // Try again
+  }
 
-// Check for any window properties that might contain bootstrap data
-console.log('🪟 Window properties:', Object.keys(window).filter(k => 
-  k.includes('bootstrap') || k.includes('lovable') || k.includes('data')
-));
+  console.log('✅ Root element found, creating React root...');
+  const root = createRoot(rootElement);
 
-const rootElement = document.getElementById("root");
-if (!rootElement) {
-  console.error('❌ Root element not found!');
-  throw new Error('Root element not found');
+  console.log('🎯 Rendering React app...');
+  root.render(
+    <StrictMode>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </StrictMode>
+  );
+
+  console.log('🎉 React app rendered successfully!');
 }
 
-console.log('✅ Root element found, creating React root...');
-const root = createRoot(rootElement);
-
-console.log('🎯 Rendering React app...');
-root.render(
-  <StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
-  </StrictMode>
-);
-
-console.log('🎉 React app rendered successfully!');
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+  initializeApp();
+}

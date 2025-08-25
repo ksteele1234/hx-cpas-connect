@@ -51,24 +51,12 @@ const ScrollToTop = () => {
   return null;
 };
 
-// Add debugging component
-const AppDebugger = () => {
-  useEffect(() => {
-    console.log('🔧 App component mounted');
-    console.log('📍 Current location:', window.location.href);
-    console.log('🏗️ Build timestamp:', new Date().toISOString());
-  }, []);
-  
-  return null;
-};
-
 const App = () => {
-  console.log('🎬 App component rendering...');
   
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <AppDebugger />
+        
         <Toaster />
         <Sonner />
         <BrowserRouter>
