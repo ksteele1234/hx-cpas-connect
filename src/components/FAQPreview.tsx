@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FAQPreview = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -103,10 +104,10 @@ const FAQPreview = () => {
             className="btn-outline group"
             asChild
           >
-            <a href="/faq">
+            <Link to="/faq">
               View All FAQs
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

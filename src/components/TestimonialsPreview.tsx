@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, Quote, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TestimonialsPreview = () => {
   const testimonials = [
@@ -86,10 +87,10 @@ const TestimonialsPreview = () => {
             className="btn-outline group"
             asChild
           >
-            <a href="/testimonials">
+            <Link to="/testimonials">
               Read More Testimonials
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

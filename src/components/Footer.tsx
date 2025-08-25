@@ -138,6 +138,11 @@ const Footer = () => {
                     variant="outline"
                     size="lg"
                     className="w-full border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                    style={{ 
+                      borderColor: 'rgba(255,255,255,0.3)',
+                      color: 'white',
+                      backgroundColor: 'transparent'
+                    }}
                   >
                     <Link to="/contact">Contact Us</Link>
                   </Button>
