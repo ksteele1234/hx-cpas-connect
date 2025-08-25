@@ -318,7 +318,7 @@ const CFOConsulting = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <Link to="/contact">
                   <Phone className="mr-2 h-5 w-5" />
                   Call (949) 431-0469
