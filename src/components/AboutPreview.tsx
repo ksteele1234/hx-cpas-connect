@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Award, Users, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import hirenPortrait from "@/assets/hiren-portrait.jpeg";
 
 const AboutPreview = () => {
@@ -82,10 +83,10 @@ const AboutPreview = () => {
                 className="btn-outline group"
                 asChild
               >
-                <a href="/about">
+                <Link to="/about">
                   Learn More About Our Team
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

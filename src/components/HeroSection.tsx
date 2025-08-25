@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, TrendingUp, Target } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -22,18 +23,20 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                asChild
                 size="lg" 
                 className="btn-primary animate-scale-in"
               >
-                Book a Consultation
+                <Link to="/book-consultation">Book a Consultation</Link>
               </Button>
               <Button 
+                asChild
                 size="lg" 
                 variant="outline" 
                 className="btn-outline animate-scale-in"
                 style={{ animationDelay: "0.2s" }}
               >
-                Explore Services
+                <Link to="/business-services">Explore Services</Link>
               </Button>
             </div>
 
@@ -99,10 +102,11 @@ const HeroSection = () => {
                 
                 <div className="pt-4 border-t border-primary-foreground/20">
                   <Button 
+                    asChild
                     variant="secondary" 
                     className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                   >
-                    Learn About Our Approach
+                    <Link to="/about">Learn About Our Approach</Link>
                   </Button>
                 </div>
               </div>

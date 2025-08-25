@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FinalCTA = () => {
   return (
@@ -20,23 +21,29 @@ const FinalCTA = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button 
+                asChild
                 size="lg" 
                 variant="secondary"
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group px-8 py-4 text-lg font-semibold"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book a Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Link to="/book-consultation">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book a Consultation
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
               
               <Button 
+                asChild
                 size="lg" 
                 variant="outline"
                 className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary group px-8 py-4 text-lg font-semibold"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Us Today
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Link to="/contact">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Contact Us Today
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </div>
 

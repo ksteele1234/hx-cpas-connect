@@ -9,6 +9,7 @@ import {
   Target,
   ArrowRight 
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesGrid = () => {
   const services = [
@@ -92,9 +93,9 @@ const ServicesGrid = () => {
                     className="text-primary hover:text-primary-foreground hover:bg-primary p-0 h-auto font-semibold"
                     asChild
                   >
-                    <a href={service.href}>
+                    <Link to={service.href}>
                       Learn More →
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
