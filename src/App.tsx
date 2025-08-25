@@ -13,6 +13,9 @@ import BookConsultation from "./pages/BookConsultation";
 import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import ADACompliance from "./pages/ADACompliance";
+import Sitemap from "./pages/Sitemap";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ThankYou from "./pages/ThankYou";
@@ -37,6 +40,9 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/ada-compliance" element={<ADACompliance />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/thank-you" element={<ThankYou />} />
