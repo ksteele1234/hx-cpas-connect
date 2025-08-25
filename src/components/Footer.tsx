@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, Mail, Facebook, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -48,28 +49,28 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-primary-foreground">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a 
-                    href="/testimonials" 
+                  <Link 
+                    to="/testimonials" 
                     className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     Testimonials
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
-                    href="/faq" 
+                  <Link 
+                    to="/faq" 
                     className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     FAQs
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
-                    href="/blog" 
+                  <Link 
+                    to="/blog" 
                     className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     Blog
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -79,20 +80,20 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-primary-foreground">Legal</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a 
-                    href="/privacy-policy" 
+                  <Link 
+                    to="/privacy-policy" 
                     className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
-                    href="/terms-conditions" 
+                  <Link 
+                    to="/terms-of-service" 
                     className="text-primary-foreground/80 hover:text-secondary transition-colors"
                   >
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -102,16 +103,18 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-primary-foreground">Get Started</h3>
               <div className="space-y-3">
                 <Button 
+                  asChild
                   variant="secondary" 
                   className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                 >
-                  Contact Us
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
                 <Button 
+                  asChild
                   variant="outline" 
                   className="w-full border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                 >
-                  Book a Consultation
+                  <Link to="/book-consultation">Book a Consultation</Link>
                 </Button>
               </div>
             </div>
@@ -126,19 +129,19 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row items-center gap-4 text-sm text-primary-foreground/80">
               <p>&copy; 2024 HRX CPAs. All rights reserved.</p>
               <div className="flex items-center gap-4">
-                <a 
-                  href="/ada-compliance" 
+                <Link 
+                  to="/ada-compliance" 
                   className="hover:text-secondary transition-colors"
                 >
                   ADA Compliance
-                </a>
+                </Link>
                 <span>|</span>
-                <a 
-                  href="/sitemap" 
+                <Link 
+                  to="/sitemap" 
                   className="hover:text-secondary transition-colors"
                 >
                   Sitemap
-                </a>
+                </Link>
               </div>
             </div>
             
