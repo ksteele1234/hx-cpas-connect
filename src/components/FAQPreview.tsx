@@ -33,7 +33,26 @@ const FAQPreview = () => {
   };
 
   return (
-    <section className="section-padding bg-surface">
+    <>
+      {/* FAQ Schema for Homepage */}
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
+      <section className="section-padding bg-surface">
       <div className="container-width">
         <div className="text-center mb-16">
           <h2 className="text-section-title">Frequently Asked Questions</h2>
@@ -92,6 +111,7 @@ const FAQPreview = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -160,6 +160,48 @@ const FAQ = () => {
         <meta name="description" content="Get answers to common questions about our CPA services, pricing, business packages, personal tax services, and CFO consulting. Learn more about HRX CPAs." />
         <meta name="keywords" content="CPA FAQ Irvine, tax services questions, CFO consulting FAQ, bookkeeping questions, business tax FAQ Orange County" />
         <link rel="canonical" href="https://hrxcpas.com/faq" />
+        
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              ...generalFAQs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              })),
+              ...businessFAQs.map(faq => ({
+                "@type": "Question", 
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              })),
+              ...personalFAQs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer", 
+                  "text": faq.answer
+                }
+              })),
+              ...processFAQs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            ]
+          })}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
