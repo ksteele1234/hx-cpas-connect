@@ -10,6 +10,8 @@ import PersonalServices from "./pages/PersonalServices";
 import Pricing from "./pages/Pricing";
 import ContactUs from "./pages/ContactUs";
 import BookConsultation from "./pages/BookConsultation";
+import Testimonials from "./pages/Testimonials";
+import FAQ from "./pages/FAQ";
 import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/thank-you" element={<ThankYou />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
