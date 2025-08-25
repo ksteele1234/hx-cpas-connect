@@ -136,76 +136,88 @@
 }
 
 @layer components {
-  /* Professional Button Variants */
+  /* Professional Button Variants - Optimized for production */
   .btn-primary {
-    @apply bg-primary hover:bg-hover active:bg-active text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5;
+    @apply bg-primary hover:bg-hover active:bg-active text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg;
+    transition: var(--transition-smooth);
+    transform: translateZ(0); /* Hardware acceleration */
   }
+  .btn-primary:hover { transform: translateY(-0.5px) translateZ(0); }
   
   .btn-secondary {
-    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5;
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg;
+    transition: var(--transition-smooth);
+    transform: translateZ(0);
   }
+  .btn-secondary:hover { transform: translateY(-0.5px) translateZ(0); }
   
   .btn-outline {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-3 rounded-lg;
+    transition: var(--transition-smooth);
+    transform: translateZ(0);
   }
+  .btn-outline:hover { transform: translateY(-0.5px) translateZ(0); }
   
-  /* Professional Cards */
+  /* Professional Cards - Optimized */
   .card-elegant {
-    @apply bg-card border border-border rounded-xl shadow-md hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1;
+    @apply bg-card border border-border rounded-xl shadow-md hover:shadow-elegant;
+    transition: var(--transition-smooth);
+    transform: translateZ(0);
   }
+  .card-elegant:hover { transform: translateY(-1px) translateZ(0); }
   
   .card-service {
-    @apply bg-gradient-to-br from-white to-surface border border-border rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2;
+    @apply bg-gradient-to-br from-white to-surface border border-border rounded-xl p-6 shadow-md hover:shadow-xl;
+    transition: var(--transition-smooth);
+    transform: translateZ(0);
   }
+  .card-service:hover { transform: translateY(-2px) translateZ(0); }
   
   /* Professional Sections */
-  .section-padding {
-    @apply py-16 lg:py-24;
-  }
-  
-  .container-width {
-    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
+  .section-padding { @apply py-16 lg:py-24; }
+  .container-width { @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8; }
   
   /* Typography Styles */
-  .text-hero {
-    @apply text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight;
-  }
+  .text-hero { @apply text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight; }
+  .text-subtitle { @apply text-xl lg:text-2xl text-muted-foreground leading-relaxed; }
+  .text-section-title { @apply text-3xl lg:text-4xl font-bold text-foreground mb-6; }
   
-  .text-subtitle {
-    @apply text-xl lg:text-2xl text-muted-foreground leading-relaxed;
-  }
-  
-  .text-section-title {
-    @apply text-3xl lg:text-4xl font-bold text-foreground mb-6;
-  }
-  
-  /* Micro-animations - optimized for Core Web Vitals */
+  /* Micro-animations - GPU accelerated for performance */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
     will-change: opacity, transform;
+    transform: translateZ(0);
   }
   
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
     will-change: opacity, transform;
+    transform: translateZ(0);
   }
   
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out forwards;
     will-change: opacity, transform;
+    transform: translateZ(0);
   }
   
-  /* Hover effects - optimized for performance */
+  /* Hover effects - Hardware accelerated */
   .hover-lift {
-    @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-all duration-300;
     will-change: transform, box-shadow;
+    transform: translateZ(0);
+  }
+  .hover-lift:hover {
+    transform: translateY(-1px) translateZ(0);
+    box-shadow: var(--shadow-lg);
   }
   
   .hover-grow {
-    @apply transition-transform duration-300 transform hover:scale-105;
+    @apply transition-transform duration-300;
     will-change: transform;
+    transform: translateZ(0);
   }
+  .hover-grow:hover { transform: scale(1.05) translateZ(0); }
 }
 
 @layer utilities {

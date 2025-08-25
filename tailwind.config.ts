@@ -8,6 +8,32 @@ export default {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 	],
+	// Remove unused CSS classes in production
+	purge: {
+		enabled: process.env.NODE_ENV === 'production',
+		content: [
+			"./src/**/*.{ts,tsx,js,jsx}",
+			"./index.html"
+		],
+		options: {
+			safelist: [
+				// Keep animation classes that might be dynamically added
+				/^animate-/,
+				/^transition-/,
+				// Keep responsive classes
+				/^sm:/,
+				/^md:/,
+				/^lg:/,
+				/^xl:/,
+				/^2xl:/,
+				// Keep hover and focus states
+				/^hover:/,
+				/^focus:/,
+				// Keep dark mode classes
+				/^dark:/
+			]
+		}
+	},
 	prefix: "",
 	theme: {
 		container: {
