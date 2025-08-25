@@ -190,11 +190,11 @@ const BookConsultation = () => {
 
                 {/* Calendar Embed */}
                 <Card className="card-elegant p-6">
-                  <div className="w-full min-h-[600px]">
+                  <div className="w-full min-h-[800px]">
                     <iframe 
                       src="https://api.leadconnectorhq.com/widget/booking/LSC09oG5ynpJHXJKysin" 
-                      style={{width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px'}} 
-                      scrolling="no" 
+                      style={{width: '100%', height: '800px', border: 'none', overflow: 'auto'}} 
+                      scrolling="yes" 
                       id="LSC09oG5ynpJHXJKysin_1756073382852"
                       title="Book Consultation with Hiren Parmer"
                     ></iframe>
