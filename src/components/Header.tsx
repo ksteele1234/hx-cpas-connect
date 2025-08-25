@@ -102,16 +102,16 @@ const Header = () => {
               ))}
               
               {/* Business Services Dropdown */}
-              <div className="relative group">
+              <div className="relative group flex items-center gap-1">
                 <Link 
                   to="/business-services"
-                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative flex items-center gap-1"
+                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative"
                 >
                   Business Services
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="absolute -right-2 top-0 p-2 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  <DropdownMenuTrigger className="p-1 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
@@ -130,16 +130,16 @@ const Header = () => {
               </div>
 
               {/* Personal Services Dropdown */}
-              <div className="relative group">
+              <div className="relative group flex items-center gap-1">
                 <Link 
                   to="/personal-services"
-                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative flex items-center gap-1"
+                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative"
                 >
                   Personal & Family Services
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="absolute -right-2 top-0 p-2 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  <DropdownMenuTrigger className="p-1 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                     <ChevronDown className="w-4 h-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
