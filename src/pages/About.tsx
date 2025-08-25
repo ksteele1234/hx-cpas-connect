@@ -101,6 +101,10 @@ const About = () => {
                     src={hirenPresentation} 
                     alt="Hiren Parmar giving a presentation at HRXCPAS office with a podium and large screen in the background"
                     className="w-full h-[400px] object-cover"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </Card>
               </div>
@@ -126,6 +130,10 @@ const About = () => {
                     src={hirenPortrait} 
                     alt="Hiren Parmar, CPA, President of HRXCPAS, professional headshot"
                     className="w-full h-[500px] object-cover"
+                    width="600"
+                    height="500"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </Card>
                 
@@ -337,6 +345,10 @@ const About = () => {
                     src={officeBuildingImage} 
                     alt="Modern three-story HRXCPAS office building with glass windows and palm trees"
                     className="w-full h-[250px] object-cover"
+                    width="600"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="p-4">
                     <h4 className="font-semibold text-foreground mb-2">Contemporary Office Building</h4>
@@ -351,6 +363,10 @@ const About = () => {
                     src={spectrumCenterImage} 
                     alt="Spectrum Business Center entrance with HRXCPAS office in Irvine, California"
                     className="w-full h-[250px] object-cover"
+                    width="600"
+                    height="250"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="p-4">
                     <h4 className="font-semibold text-foreground mb-2">Spectrum Business Center</h4>
