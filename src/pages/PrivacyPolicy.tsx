@@ -200,37 +200,98 @@ const PrivacyPolicy = () => {
                 Your Rights and Choices
               </h2>
               
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Access and Correction</h3>
-                    <p className="text-muted-foreground">Request access to or correction of your personal information</p>
+              <div className="space-y-6">
+                {/* California Privacy Rights */}
+                <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">
+                    California Consumer Privacy Rights (CCPA/CPRA)
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    California residents have additional rights under the California Consumer Privacy Act (CCPA) and 
+                    California Privacy Rights Act (CPRA):
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Right to Know</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• What personal information we collect</li>
+                        <li>• How we use your information</li>
+                        <li>• Who we share it with</li>
+                        <li>• How long we retain it</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">Right to Control</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Delete personal information</li>
+                        <li>• Opt-out of sale (we don't sell data)</li>
+                        <li>• Correct inaccurate information</li>
+                        <li>• Limit use of sensitive information</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-white rounded border">
+                    <p className="text-sm text-muted-foreground">
+                      <strong>To exercise these rights:</strong> Email us at 
+                      <a href="mailto:privacy@hrxcpas.com" className="text-primary ml-1">privacy@hrxcpas.com</a> or 
+                      call <a href="tel:+19494310469" className="text-primary">(949) 431-0469</a>. 
+                      We will verify your identity before processing requests.
+                    </p>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Communication Preferences</h3>
-                    <p className="text-muted-foreground">Opt out of non-essential communications</p>
+
+                {/* General Rights */}
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Access and Correction</h3>
+                      <p className="text-muted-foreground">Request access to or correction of your personal information</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Communication Preferences</h3>
+                      <p className="text-muted-foreground">Opt out of non-essential communications (CAN-SPAM compliant unsubscribe links)</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Data Portability</h3>
+                      <p className="text-muted-foreground">Request a copy of your data in a portable format</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Account Closure</h3>
+                      <p className="text-muted-foreground">Request closure of your account (subject to IRS record retention requirements)</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">Data Retention</h3>
+                      <p className="text-muted-foreground">We retain client records for 7 years minimum as required by IRS regulations and professional standards</p>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Data Portability</h3>
-                    <p className="text-muted-foreground">Request a copy of your data in a portable format</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">Account Closure</h3>
-                    <p className="text-muted-foreground">Request closure of your account (subject to legal retention requirements)</p>
-                  </div>
+
+                {/* Cookies and Tracking */}
+                <div className="border-t border-border pt-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-3">Cookies and Website Tracking</h3>
+                  <p className="text-muted-foreground mb-3">
+                    We use cookies and similar technologies to enhance your website experience. You can control cookie preferences through your browser settings.
+                  </p>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/cookie-policy">View Cookie Policy</Link>
+                  </Button>
                 </div>
               </div>
             </Card>

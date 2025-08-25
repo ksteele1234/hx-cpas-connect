@@ -95,6 +95,30 @@ const Footer = () => {
                     Terms & Conditions
                   </Link>
                 </li>
+                <li>
+                  <Link 
+                    to="/professional-disclosures" 
+                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                  >
+                    Professional Disclosures
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/cookie-policy" 
+                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                  >
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/ada-compliance" 
+                    className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                  >
+                    ADA Compliance
+                  </Link>
+                </li>
               </ul>
             </div>
 
