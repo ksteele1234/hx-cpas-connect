@@ -84,7 +84,6 @@ const Header = () => {
                   width="150"
                   height="40"
                   loading="eager"
-                  fetchPriority="high"
                 />
               </Link>
             </div>
