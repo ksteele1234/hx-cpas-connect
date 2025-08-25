@@ -54,6 +54,10 @@ const Header = () => {
                   src={hrxLogo} 
                   alt="HRX CPAs Logo" 
                   className="w-[150px] h-auto"
+                  width="150"
+                  height="40"
+                  loading="eager"
+                  fetchPriority="high"
                 />
               </Link>
             </div>

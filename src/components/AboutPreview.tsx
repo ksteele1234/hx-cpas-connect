@@ -17,6 +17,10 @@ const AboutPreview = () => {
                 src={hirenPortrait} 
                 alt="Hiren Parmar, CPA, President of HRXCPAS, professional headshot"
                 className="w-full h-[500px] object-cover"
+                width="600"
+                height="500"
+                loading="lazy"
+                decoding="async"
               />
             </Card>
           </div>

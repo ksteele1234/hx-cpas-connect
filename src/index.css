@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(fonts);
 
 @tailwind base;
 @tailwind components;
@@ -180,26 +180,31 @@
     @apply text-3xl lg:text-4xl font-bold text-foreground mb-6;
   }
   
-  /* Micro-animations */
+  /* Micro-animations - optimized for Core Web Vitals */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
+    will-change: opacity, transform;
   }
   
   .animate-slide-up {
     animation: slideUp 0.8s ease-out forwards;
+    will-change: opacity, transform;
   }
   
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out forwards;
+    will-change: opacity, transform;
   }
   
-  /* Hover effects */
+  /* Hover effects - optimized for performance */
   .hover-lift {
     @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg;
+    will-change: transform, box-shadow;
   }
   
   .hover-grow {
     @apply transition-transform duration-300 transform hover:scale-105;
+    will-change: transform;
   }
 }
 

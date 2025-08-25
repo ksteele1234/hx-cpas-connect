@@ -19,4 +19,24 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Optimize bundle size for better Core Web Vitals
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          icons: ['lucide-react']
+        }
+      }
+    },
+    // Enable gzip compression
+    reportCompressedSize: true,
+    // Reduce chunk size warnings threshold
+    chunkSizeWarningLimit: 1000
+  },
+  // Enable prefetching for better performance
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react']
+  }
 }));
