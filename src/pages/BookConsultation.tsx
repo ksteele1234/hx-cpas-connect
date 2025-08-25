@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -97,7 +98,13 @@ const BookConsultation = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Book Consultation | Schedule CPA Meeting | HRX CPAs Irvine</title>
+        <meta name="description" content="Schedule your complimentary consultation with HRX CPAs. Discuss tax planning, CFO services, bookkeeping, and business growth strategies with our expert team in Irvine." />
+        <link rel="canonical" href="https://hrxcpas.com/book-consultation" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -395,7 +402,8 @@ const BookConsultation = () => {
       </main>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

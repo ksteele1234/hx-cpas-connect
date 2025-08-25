@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Scale, UserCheck, Shield, AlertCircle, Calendar } from "lucide-react";
@@ -7,7 +8,13 @@ import { Link } from "react-router-dom";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Terms of Service | Client Agreement & Professional Standards | HRX CPAs</title>
+        <meta name="description" content="Terms of service for HRX CPAs: Professional engagement terms, client responsibilities, service standards, and legal agreements for our CPA services in Irvine." />
+        <link rel="canonical" href="https://hrxcpas.com/terms-of-service" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -296,7 +303,8 @@ const TermsOfService = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

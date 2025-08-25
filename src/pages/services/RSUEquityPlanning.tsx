@@ -98,7 +98,13 @@ const RSUEquityPlanning = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>RSU & Equity Planning | Stock Compensation Tax Strategy | HRX CPAs Irvine</title>
+        <meta name="description" content="Expert RSU and equity compensation planning: tax optimization, vesting strategies, stock option planning for tech professionals and executives in Orange County." />
+        <link rel="canonical" href="https://hrxcpas.com/services/rsu-equity-planning" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -429,7 +435,8 @@ const RSUEquityPlanning = () => {
       </main>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

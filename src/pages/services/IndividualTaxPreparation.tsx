@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -126,7 +127,13 @@ const IndividualTaxPreparation = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Individual Tax Preparation | Personal Tax Services | HRX CPAs Irvine</title>
+        <meta name="description" content="Comprehensive individual tax preparation for high-income professionals: monthly packages from $119, RSU planning, multi-state returns, audit support in Orange County." />
+        <link rel="canonical" href="https://hrxcpas.com/services/individual-tax-preparation" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -411,7 +418,8 @@ const IndividualTaxPreparation = () => {
       </main>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

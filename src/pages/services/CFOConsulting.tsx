@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +28,13 @@ import { Link } from "react-router-dom";
 
 const CFOConsulting = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>CFO Consulting Services | Virtual CFO | Financial Advisory | HRX CPAs Irvine</title>
+        <meta name="description" content="Fractional CFO services for $1M-$10M businesses: financial planning, KPI dashboards, fundraising support, business growth strategies in Orange County." />
+        <link rel="canonical" href="https://hrxcpas.com/services/cfo-consulting" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -388,7 +395,8 @@ const CFOConsulting = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

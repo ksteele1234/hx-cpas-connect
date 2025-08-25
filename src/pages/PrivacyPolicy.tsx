@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Shield, Eye, Database, Lock, UserCheck, Calendar } from "lucide-react";
@@ -7,7 +8,13 @@ import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Privacy Policy | Data Protection & Security | HRX CPAs Irvine</title>
+        <meta name="description" content="HRX CPAs privacy policy: How we protect, collect, and use your personal and financial information. GDPR compliant data practices for our Irvine CPA firm." />
+        <link rel="canonical" href="https://hrxcpas.com/privacy-policy" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -277,7 +284,8 @@ const PrivacyPolicy = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

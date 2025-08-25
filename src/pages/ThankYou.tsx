@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowLeft, Clock, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +8,13 @@ import { Link } from "react-router-dom";
 
 const ThankYou = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Thank You | Contact Confirmation | HRX CPAs Irvine</title>
+        <meta name="description" content="Thank you for contacting HRX CPAs. We'll respond within 4 business hours to discuss your tax planning, CFO services, or accounting needs." />
+        <link rel="canonical" href="https://hrxcpas.com/thank-you" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -123,7 +130,8 @@ const ThankYou = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

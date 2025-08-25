@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Shield, Eye, Headphones, Monitor } from "lucide-react";
@@ -7,7 +8,13 @@ import { Link } from "react-router-dom";
 
 const ADACompliance = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>ADA Compliance Statement | Website Accessibility | HRX CPAs Irvine</title>
+        <meta name="description" content="HRX CPAs ADA compliance statement: Our commitment to website accessibility, WCAG guidelines compliance, and inclusive design for all users and disabilities." />
+        <link rel="canonical" href="https://hrxcpas.com/ada-compliance" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -274,7 +281,8 @@ const ADACompliance = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

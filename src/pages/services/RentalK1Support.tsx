@@ -120,7 +120,13 @@ const RentalK1Support = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Rental Property & K-1 Tax Support | Real Estate Investment Tax | HRX CPAs</title>
+        <meta name="description" content="Expert rental property and K-1 partnership tax support: depreciation optimization, passive loss planning, rental income strategies for real estate investors." />
+        <link rel="canonical" href="https://hrxcpas.com/services/rental-k1-support" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main>
@@ -444,7 +450,8 @@ const RentalK1Support = () => {
       </main>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

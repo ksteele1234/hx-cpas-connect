@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Home, ArrowLeft, Search, Phone, Mail } from "lucide-react";
@@ -7,7 +8,13 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Page Not Found | 404 Error | HRX CPAs Irvine</title>
+        <meta name="description" content="Sorry, the page you're looking for doesn't exist. Return to HRX CPAs homepage or contact us for assistance with tax planning and CFO services in Irvine." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -154,7 +161,8 @@ const NotFound = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

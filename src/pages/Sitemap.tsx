@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Home, Building, FileText, Users, MessageCircle, Scale, Shield, BookOpen, Calendar } from "lucide-react";
@@ -56,7 +57,13 @@ const Sitemap = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Site Map | Website Navigation | HRX CPAs Irvine</title>
+        <meta name="description" content="Complete site map for HRX CPAs website: Find all pages including services, resources, legal information, and contact details for our Irvine CPA firm." />
+        <link rel="canonical" href="https://hrxcpas.com/sitemap" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20 pb-16">
         {/* Hero Section */}
@@ -252,7 +259,8 @@ const Sitemap = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

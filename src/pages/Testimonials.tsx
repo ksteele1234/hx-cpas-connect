@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star, Quote, ArrowRight, Users, TrendingUp, Shield } from "lucide-react";
@@ -121,7 +122,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <Helmet>
+        <title>Client Testimonials | Success Stories | HRX CPAs Irvine Reviews</title>
+        <meta name="description" content="Read client success stories and testimonials for HRX CPAs. See how we've helped businesses and individuals with tax planning, CFO services, and financial growth in Orange County." />
+        <link rel="canonical" href="https://hrxcpas.com/testimonials" />
+      </Helmet>
+      <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -310,7 +317,8 @@ const Testimonials = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
