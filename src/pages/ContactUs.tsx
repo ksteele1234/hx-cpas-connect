@@ -123,7 +123,7 @@ const ContactUs = () => {
                   </p>
                 </div>
 
-                <Card className="card-elegant p-6">
+                <Card className="card-elegant overflow-hidden">
                   <div className="w-full min-h-[600px]">
                     <iframe
                       src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
