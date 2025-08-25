@@ -102,62 +102,60 @@ const Header = () => {
               ))}
               
               {/* Business Services Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <div className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer">
-                    <Link 
-                      to="/business-services"
-                      className="hover:text-primary transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Business Services
-                    </Link>
+              <div className="relative group">
+                <Link 
+                  to="/business-services"
+                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative flex items-center gap-1"
+                >
+                  Business Services
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="absolute -right-2 top-0 p-2 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                     <ChevronDown className="w-4 h-4" />
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                  </div>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
-                  {businessServices.map((service) => (
-                    <DropdownMenuItem key={service.name} asChild>
-                      <Link 
-                        to={service.href}
-                        className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
-                      >
-                        {service.name}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
+                    {businessServices.map((service) => (
+                      <DropdownMenuItem key={service.name} asChild>
+                        <Link 
+                          to={service.href}
+                          className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
+                        >
+                          {service.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
 
               {/* Personal Services Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <div className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer">
-                    <Link 
-                      to="/personal-services"
-                      className="hover:text-primary transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Personal & Family Services
-                    </Link>
+              <div className="relative group">
+                <Link 
+                  to="/personal-services"
+                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative flex items-center gap-1"
+                >
+                  Personal & Family Services
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="absolute -right-2 top-0 p-2 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
                     <ChevronDown className="w-4 h-4" />
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                  </div>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
-                  {personalServices.map((service) => (
-                    <DropdownMenuItem key={service.name} asChild>
-                      <Link 
-                        to={service.href}
-                        className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
-                      >
-                        {service.name}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
+                    {personalServices.map((service) => (
+                      <DropdownMenuItem key={service.name} asChild>
+                        <Link 
+                          to={service.href}
+                          className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
+                        >
+                          {service.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
 
               {/* End Navigation Links */}
               {endNavigationLinks.map((link) => (
