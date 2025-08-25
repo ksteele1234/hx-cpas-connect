@@ -158,19 +158,25 @@ const ContactUs = () => {
                   </p>
                 </div>
 
-                <Card className="card-elegant p-6">
-                  <div className="w-full min-h-[400px] flex items-center justify-center text-center">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">Contact Form Temporarily Unavailable</h3>
-                      <p className="text-muted-foreground mb-6">Please call us directly or use the contact information below.</p>
-                      <Button asChild>
-                        <a href="tel:(949) 431-0469">
-                          <Phone className="w-4 h-4 mr-2" />
-                          Call (949) 431-0469
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
+                <Card className="card-elegant overflow-hidden">
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
+                    style={{width: '100%', height: '716px', border: 'none', borderRadius: '15px'}}
+                    id="inline-kLopwZyWToh3Mfk6dT32" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Us Form (on the website)"
+                    data-height="716"
+                    data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
+                    data-form-id="kLopwZyWToh3Mfk6dT32"
+                    title="Contact Us Form (on the website)"
+                  ></iframe>
+                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </Card>
               </div>
 
