@@ -96,13 +96,17 @@ const ContactUs = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-primary">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book a Consultation
+                <Button size="lg" className="btn-primary" asChild>
+                  <a href="/book-consultation">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book a Consultation
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="btn-outline">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (949) 431-0469
+                <Button size="lg" variant="outline" className="btn-outline" asChild>
+                  <a href="tel:(949) 431-0469">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (949) 431-0469
+                  </a>
                 </Button>
               </div>
             </div>
@@ -235,10 +239,13 @@ const ContactUs = () => {
                     <Button 
                       size="lg" 
                       className="w-full btn-primary group"
+                      asChild
                     >
-                      <Calendar className="w-5 h-5 mr-2" />
-                      Book a Consultation
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <a href="/book-consultation">
+                        <Calendar className="w-5 h-5 mr-2" />
+                        Book a Consultation
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </a>
                     </Button>
                     
                     <Button 
