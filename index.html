@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -94,6 +95,9 @@
       }
     }
     </script>
+
+    <!-- Cache busting for build -->
+    <meta name="build-timestamp" content="2025-08-25T17:58:00Z">
   </head>
 
   <body>
@@ -111,7 +115,26 @@
         max-width: 100%;
         height: auto;
       }
+
+      /* Debug helper to ensure root is visible */
+      #root {
+        min-height: 100vh;
+        position: relative;
+      }
     </style>
+    
+    <!-- Debug script to log initial state -->
+    <script>
+      console.log('📄 HTML loaded, DOM ready');
+      console.log('🎯 Root element exists:', !!document.getElementById('root'));
+      
+      // Log when DOM is fully loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('🏁 DOM Content Loaded');
+        console.log('📜 All scripts:', Array.from(document.scripts).length);
+      });
+    </script>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
