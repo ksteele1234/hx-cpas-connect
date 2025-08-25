@@ -159,7 +159,7 @@ const Header = () => {
 
             {/* Client Portal Button (Desktop) */}
             <div className="hidden lg:block">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" disabled>
+              <Button variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground" disabled>
                 Client Portal
               </Button>
             </div>
@@ -263,7 +263,8 @@ const Header = () => {
               
               <div className="pt-4 border-t border-border space-y-3">
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  variant="secondary" 
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                   disabled
                 >
                   Client Portal
