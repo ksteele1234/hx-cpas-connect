@@ -179,7 +179,7 @@ const BusinessServices = () => {
                     Book a Consultation
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary bg-white/10" asChild>
                   <Link to="/contact">
                     Contact Us Today
                   </Link>
