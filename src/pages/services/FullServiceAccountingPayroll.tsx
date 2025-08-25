@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -21,6 +22,35 @@ import { Link } from "react-router-dom";
 
 const FullServiceAccountingPayroll = () => {
   return (
+    <>
+      <Helmet>
+        <title>Full Service Accounting & Payroll | Complete Business Services | HRX CPAs</title>
+        <meta name="description" content="Comprehensive accounting and payroll services for growing businesses: bookkeeping, financial reporting, payroll processing, tax compliance in Orange County." />
+        <link rel="canonical" href="https://hrxcpas.com/services/full-service-accounting-payroll" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Full Service Accounting & Payroll | Complete Business Services | HRX CPAs" />
+        <meta property="og:description" content="Comprehensive accounting and payroll services for growing businesses: bookkeeping, financial reporting, payroll processing, tax compliance in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/full-service-accounting-payroll" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Full Service Accounting & Payroll | Complete Business Services | HRX CPAs" />
+        <meta name="twitter:description" content="Comprehensive accounting and payroll services for growing businesses: bookkeeping, financial reporting, payroll processing, tax compliance." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Full Service Accounting & Payroll" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
+      </Helmet>
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
@@ -391,7 +421,8 @@ const FullServiceAccountingPayroll = () => {
         </section>
       </main>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

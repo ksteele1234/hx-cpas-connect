@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -139,6 +140,35 @@ const PersonalEstatePlanning = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Personal Estate Planning Coordination | Multi-Generational Wealth | HRX CPAs</title>
+        <meta name="description" content="Expert estate planning coordination for high-net-worth families: tax optimization, trust structures, wealth transfer strategies across generations in Orange County." />
+        <link rel="canonical" href="https://hrxcpas.com/services/personal-estate-planning" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Personal Estate Planning Coordination | Multi-Generational Wealth | HRX CPAs" />
+        <meta property="og:description" content="Expert estate planning coordination for high-net-worth families: tax optimization, trust structures, wealth transfer strategies across generations in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/personal-estate-planning" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Personal Estate Planning Coordination | Multi-Generational Wealth | HRX CPAs" />
+        <meta name="twitter:description" content="Expert estate planning coordination for high-net-worth families: tax optimization, trust structures, wealth transfer strategies across generations." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Personal Estate Planning Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
+      </Helmet>
     <div className="min-h-screen bg-background">
       <Header />
       
@@ -466,7 +496,8 @@ const PersonalEstatePlanning = () => {
       </main>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -104,6 +104,29 @@ const RSUEquityPlanning = () => {
         <title>RSU & Equity Planning | Stock Compensation Tax Strategy | HRX CPAs Irvine</title>
         <meta name="description" content="Expert RSU and equity compensation planning: tax optimization, vesting strategies, stock option planning for tech professionals and executives in Orange County." />
         <link rel="canonical" href="https://hrxcpas.com/services/rsu-equity-planning" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="RSU & Equity Planning | Stock Compensation Tax Strategy | HRX CPAs" />
+        <meta property="og:description" content="Expert RSU and equity compensation planning: tax optimization, vesting strategies, stock option planning for tech professionals and executives in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/rsu-equity-planning" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RSU & Equity Planning | Stock Compensation Tax Strategy | HRX CPAs" />
+        <meta name="twitter:description" content="Expert RSU and equity compensation planning: tax optimization, vesting strategies, stock option planning for tech professionals and executives." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs RSU & Equity Planning Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
