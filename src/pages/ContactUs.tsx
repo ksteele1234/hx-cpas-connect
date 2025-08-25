@@ -176,7 +176,7 @@ const ContactUs = () => {
                     data-form-id="kLopwZyWToh3Mfk6dT32"
                     title="Contact Us Form (on the website)"
                   ></iframe>
-                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
                 </Card>
               </div>
 
