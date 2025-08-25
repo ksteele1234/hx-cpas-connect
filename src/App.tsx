@@ -53,52 +53,19 @@ const ScrollToTop = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <CookieConsent />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/business-services" element={<BusinessServices />} />
-            <Route path="/personal-services" element={<PersonalServices />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/book-consultation" element={<BookConsultation />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/ada-compliance" element={<ADACompliance />} />
-            <Route path="/sitemap" element={<Sitemap />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/professional-disclosures" element={<ProfessionalDisclosures />} />
-            <Route path="/cookie-policy" element={<CookiePolicy />} />
-            <Route path="/client-engagement-agreement" element={<ClientEngagementAgreement />} />
-            <Route path="/thank-you" element={<ThankYou />} />
-            {/* Service Pages */}
-            <Route path="/services/bookkeeping" element={<Bookkeeping />} />
-            <Route path="/services/tax-planning-prep" element={<TaxPlanningPrep />} />
-            <Route path="/services/cfo-consulting" element={<CFOConsulting />} />
-            <Route path="/services/estate-planning-coordination" element={<EstatePlanningCoordination />} />
-            <Route path="/services/business-valuation" element={<BusinessValuation />} />
-            <Route path="/services/exit-planning" element={<ExitPlanning />} />
-            <Route path="/services/full-service-accounting-payroll" element={<FullServiceAccountingPayroll />} />
-            <Route path="/services/buyer-due-diligence" element={<BuyerDueDiligence />} />
-            {/* Personal Service Pages */}
-            <Route path="/services/individual-tax-preparation" element={<IndividualTaxPreparation />} />
-            <Route path="/services/rsu-equity-planning" element={<RSUEquityPlanning />} />
-            <Route path="/services/rental-k1-support" element={<RentalK1Support />} />
-            <Route path="/services/personal-estate-planning" element={<PersonalEstatePlanning />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTop />
+        <div style={{ padding: '20px', textAlign: 'center' }}>
+          <h1>HRX CPAs Test Page</h1>
+          <p>If you can see this, the React app is working!</p>
+          <p>Current URL: {window.location.href}</p>
+        </div>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
 );
 
 export default App;
