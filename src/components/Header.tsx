@@ -103,12 +103,20 @@ const Header = () => {
               
               {/* Business Services Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                  Business Services
-                  <ChevronDown className="w-4 h-4" />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <DropdownMenuTrigger asChild>
+                  <div className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer">
+                    <Link 
+                      to="/business-services"
+                      className="hover:text-primary transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Business Services
+                    </Link>
+                    <ChevronDown className="w-4 h-4" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </div>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border">
+                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
                   {businessServices.map((service) => (
                     <DropdownMenuItem key={service.name} asChild>
                       <Link 
@@ -124,12 +132,20 @@ const Header = () => {
 
               {/* Personal Services Dropdown */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                  Personal & Family Services
-                  <ChevronDown className="w-4 h-4" />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <DropdownMenuTrigger asChild>
+                  <div className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer">
+                    <Link 
+                      to="/personal-services"
+                      className="hover:text-primary transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Personal & Family Services
+                    </Link>
+                    <ChevronDown className="w-4 h-4" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </div>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border">
+                <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
                   {personalServices.map((service) => (
                     <DropdownMenuItem key={service.name} asChild>
                       <Link 
@@ -202,14 +218,23 @@ const Header = () => {
               
               {/* Mobile Business Services */}
               <div className="space-y-2">
-                <button
-                  onClick={() => setBusinessDropdownOpen(!businessDropdownOpen)}
-                  className="flex items-center justify-between w-full text-foreground hover:text-primary font-medium transition-colors duration-200"
-                  aria-expanded={businessDropdownOpen}
-                >
-                  Business Services
-                  <ChevronDown className={`w-4 h-4 transition-transform ${businessDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
+                <div className="flex items-center justify-between">
+                  <Link
+                    to="/business-services"
+                    className="text-foreground hover:text-primary font-medium transition-colors duration-200"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Business Services
+                  </Link>
+                  <button
+                    onClick={() => setBusinessDropdownOpen(!businessDropdownOpen)}
+                    className="p-1 text-foreground hover:text-primary transition-colors duration-200"
+                    aria-expanded={businessDropdownOpen}
+                    aria-label="Toggle business services menu"
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform ${businessDropdownOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
                 {businessDropdownOpen && (
                   <div className="pl-4 space-y-2">
                     {businessServices.map((service) => (
@@ -228,14 +253,23 @@ const Header = () => {
 
               {/* Mobile Personal Services */}
               <div className="space-y-2">
-                <button
-                  onClick={() => setPersonalDropdownOpen(!personalDropdownOpen)}
-                  className="flex items-center justify-between w-full text-foreground hover:text-primary font-medium transition-colors duration-200"
-                  aria-expanded={personalDropdownOpen}
-                >
-                  Personal & Family Services
-                  <ChevronDown className={`w-4 h-4 transition-transform ${personalDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
+                <div className="flex items-center justify-between">
+                  <Link
+                    to="/personal-services"
+                    className="text-foreground hover:text-primary font-medium transition-colors duration-200"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Personal & Family Services
+                  </Link>
+                  <button
+                    onClick={() => setPersonalDropdownOpen(!personalDropdownOpen)}
+                    className="p-1 text-foreground hover:text-primary transition-colors duration-200"
+                    aria-expanded={personalDropdownOpen}
+                    aria-label="Toggle personal services menu"
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform ${personalDropdownOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
                 {personalDropdownOpen && (
                   <div className="pl-4 space-y-2">
                     {personalServices.map((service) => (
