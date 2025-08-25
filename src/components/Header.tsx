@@ -175,9 +175,15 @@ const Header = () => {
               <Button 
                 className="text-white" 
                 style={{ backgroundColor: 'rgb(109,160,202)', opacity: 1 }}
-                disabled
+                asChild
               >
-                Client Portal
+                <a 
+                  href="https://login.qount.io/hrx?rd=https://hrx.qount.io&org=hrx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Client Portal
+                </a>
               </Button>
             </div>
 
@@ -300,9 +306,15 @@ const Header = () => {
                 <Button 
                   className="w-full text-white"
                   style={{ backgroundColor: 'rgb(109,160,202)', opacity: 1 }}
-                  disabled
+                  asChild
                 >
-                  Client Portal
+                  <a 
+                    href="https://login.qount.io/hrx?rd=https://hrx.qount.io&org=hrx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Client Portal
+                  </a>
                 </Button>
                 <Button 
                   variant="outline"
