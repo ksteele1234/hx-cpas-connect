@@ -15,6 +15,7 @@ import {
   Star,
   TrendingUp
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -155,10 +156,10 @@ const PersonalEstatePlanning = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="btn-primary" asChild>
-                    <a href="/book-consultation">
+                    <Link to="/book-consultation">
                       <Calendar className="w-5 h-5 mr-2" />
                       Schedule Estate Review
-                    </a>
+                    </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="btn-outline" asChild>
                     <a href="#process">
@@ -229,9 +230,9 @@ const PersonalEstatePlanning = () => {
                     professionals to ensure your tax strategies align with your overall wealth plan.
                   </p>
                   <Button className="btn-primary" asChild>
-                    <a href="/book-consultation">
+                    <Link to="/book-consultation">
                       Discuss Family Planning Needs
-                    </a>
+                    </Link>
                   </Button>
                 </Card>
               </div>
@@ -385,15 +386,15 @@ const PersonalEstatePlanning = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="btn-primary" asChild>
-                  <a href="/book-consultation">
+                  <Link to="/book-consultation">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Estate Planning Review
-                  </a>
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="btn-outline" asChild>
-                  <a href="tel:+1-949-455-4842">
+                  <a href="tel:+1-949-431-0469">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call (949) 455-4842
+                    Call (949) 431-0469
                   </a>
                 </Button>
               </div>

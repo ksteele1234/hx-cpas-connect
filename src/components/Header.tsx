@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import hrxLogo from "@/assets/hrx-logo.png";
 
 const Header = () => {
@@ -35,8 +36,9 @@ const Header = () => {
             size="sm" 
             variant="secondary"
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+            asChild
           >
-            Book a Consultation
+            <Link to="/book-consultation">Book a Consultation</Link>
           </Button>
         </div>
       </div>
@@ -47,32 +49,32 @@ const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <img 
                   src={hrxLogo} 
                   alt="HRX CPAs Logo" 
                   className="w-[150px] h-auto"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navigationLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* Client Portal Button (Desktop) */}
             <div className="hidden lg:block">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" disabled>
                 Client Portal
               </Button>
             </div>
@@ -98,27 +100,29 @@ const Header = () => {
           <div className="lg:hidden bg-white border-t border-border">
             <div className="px-4 py-4 space-y-4">
               {navigationLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="block text-foreground hover:text-primary font-medium transition-colors duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 border-t border-border space-y-3">
                 <Button 
                   variant="outline" 
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  disabled
                 >
                   Client Portal
                 </Button>
                 <Button 
                   variant="secondary"
                   className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                  asChild
                 >
-                  Book a Consultation
+                  <Link to="/book-consultation">Book a Consultation</Link>
                 </Button>
                 <div className="pt-2">
                   <a 

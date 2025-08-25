@@ -15,6 +15,7 @@ import {
   Zap,
   TrendingDown
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -113,10 +114,10 @@ const RSUEquityPlanning = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="btn-primary" asChild>
-                    <a href="/book-consultation">
+                    <Link to="/book-consultation">
                       <Calendar className="w-5 h-5 mr-2" />
                       Schedule Equity Review
-                    </a>
+                    </Link>
                   </Button>
                   <Button size="lg" variant="outline" className="btn-outline" asChild>
                     <a href="#scenarios">
@@ -290,10 +291,10 @@ const RSUEquityPlanning = () => {
                 </div>
 
                 <Button className="btn-primary" asChild>
-                  <a href="/book-consultation">
+                  <Link to="/book-consultation">
                     Schedule Equity Planning Session
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
               
@@ -348,15 +349,15 @@ const RSUEquityPlanning = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="btn-primary" asChild>
-                  <a href="/book-consultation">
+                  <Link to="/book-consultation">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Consultation
-                  </a>
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="btn-outline" asChild>
-                  <a href="tel:+1-949-455-4842">
+                  <a href="tel:+1-949-431-0469">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call (949) 455-4842
+                    Call (949) 431-0469
                   </a>
                 </Button>
               </div>

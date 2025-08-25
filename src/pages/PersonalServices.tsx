@@ -18,6 +18,7 @@ import {
   Target,
   Home
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -122,12 +123,16 @@ const PersonalServices = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-primary">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Start with Core Tax Care
+                <Button size="lg" className="btn-primary" asChild>
+                  <Link to="/book-consultation">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Start with Core Tax Care
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="btn-outline">
-                  Compare All Packages
+                <Button size="lg" variant="outline" className="btn-outline" asChild>
+                  <Link to="/pricing">
+                    Compare All Packages
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -161,10 +166,10 @@ const PersonalServices = () => {
                     <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{service.subtitle}</p>
                     <Button variant="outline" size="sm" className="btn-outline group-hover:btn-primary" asChild>
-                      <a href={serviceLinks[service.id as keyof typeof serviceLinks]}>
+                      <Link to={serviceLinks[service.id as keyof typeof serviceLinks]}>
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
+                      </Link>
                     </Button>
                   </Card>
                 );
@@ -224,8 +229,11 @@ const PersonalServices = () => {
                   
                   <Button 
                     className={`w-full ${index === 1 ? 'btn-primary' : 'btn-outline'}`}
+                    asChild
                   >
-                    {index === 1 ? 'Get Started' : 'Learn More'}
+                    <Link to="/book-consultation">
+                      {index === 1 ? 'Get Started' : 'Learn More'}
+                    </Link>
                   </Button>
                 </Card>
               ))}
@@ -235,9 +243,11 @@ const PersonalServices = () => {
               <p className="text-muted-foreground mb-4">
                 Not sure which package is right for you? Schedule a consultation to discuss your needs.
               </p>
-              <Button variant="outline" className="btn-outline">
-                <Calendar className="w-4 h-4 mr-2" />
-                Schedule Consultation
+              <Button variant="outline" className="btn-outline" asChild>
+                <Link to="/book-consultation">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  Schedule Consultation
+                </Link>
               </Button>
             </div>
           </div>
@@ -255,13 +265,17 @@ const PersonalServices = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <Button size="lg" variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Start with Core Tax Care
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground group" asChild>
+                  <Link to="/book-consultation">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Start with Core Tax Care
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Schedule Consultation
+                <Button size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+                  <Link to="/book-consultation">
+                    Schedule Consultation
+                  </Link>
                 </Button>
               </div>
               

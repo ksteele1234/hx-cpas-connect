@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PackagesTeaser = () => {
   const businessPackages = [
@@ -158,10 +159,10 @@ const PackagesTeaser = () => {
             className="btn-primary group"
             asChild
           >
-            <a href="/pricing">
+            <Link to="/pricing">
               View All Pricing Details
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
