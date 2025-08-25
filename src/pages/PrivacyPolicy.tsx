@@ -241,8 +241,8 @@ const PrivacyPolicy = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                  <a href="mailto:privacy@hrxcpas.com" className="text-primary hover:text-primary/80">
-                    privacy@hrxcpas.com
+                  <a href="mailto:hiren.parmar@hrxcpas.com" className="text-primary hover:text-primary/80">
+                    hiren.parmar@hrxcpas.com
                   </a>
                 </div>
                 

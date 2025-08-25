@@ -50,10 +50,10 @@ const LocationSection = () => {
                     <div>
                       <h4 className="font-semibold text-foreground">Email</h4>
                       <a 
-                        href="mailto:info@hrxcpas.com" 
+                        href="mailto:hiren.parmar@hrxcpas.com" 
                         className="text-primary hover:text-secondary transition-colors"
                       >
-                        info@hrxcpas.com
+                        hiren.parmar@hrxcpas.com
                       </a>
                     </div>
                   </div>

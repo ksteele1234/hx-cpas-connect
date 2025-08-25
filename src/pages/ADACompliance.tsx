@@ -211,8 +211,8 @@ const ADACompliance = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Email</h4>
-                  <a href="mailto:accessibility@hrxcpas.com" className="text-primary hover:text-primary/80">
-                    accessibility@hrxcpas.com
+                  <a href="mailto:hiren.parmar@hrxcpas.com" className="text-primary hover:text-primary/80">
+                    hiren.parmar@hrxcpas.com
                   </a>
                 </div>
                 
