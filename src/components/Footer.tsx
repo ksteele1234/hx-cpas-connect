@@ -158,6 +158,11 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/client-engagement-agreement" className="hover:text-secondary transition-colors">
+                      Client Engagement Agreement
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/terms-of-service" className="hover:text-secondary transition-colors">
                       Terms of Service
                     </Link>
