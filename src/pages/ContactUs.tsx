@@ -82,6 +82,29 @@ const ContactUs = () => {
         <meta name="description" content="Contact HRX CPAs in Irvine for business tax planning, CFO services & personal tax preparation. Call (949) 431-0469 or schedule online consultation today." />
         <meta name="keywords" content="contact HRX CPAs, Irvine CPA consultation, schedule CPA appointment, tax planning consultation Irvine, CFO services contact" />
         <link rel="canonical" href="https://hrxcpas.com/contact" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Contact HRX CPAs | Schedule CPA Consultation in Irvine" />
+        <meta property="og:description" content="Contact HRX CPAs in Irvine for business tax planning, CFO services & personal tax preparation. Call (949) 431-0469 or schedule online consultation today." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/contact" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/office-building.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact HRX CPAs | Schedule CPA Consultation in Irvine" />
+        <meta name="twitter:description" content="Contact HRX CPAs in Irvine for business tax planning, CFO services & personal tax preparation. Call (949) 431-0469 or schedule consultation." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/office-building.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Office Building in Irvine, California" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

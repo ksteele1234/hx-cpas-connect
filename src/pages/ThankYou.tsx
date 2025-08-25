@@ -13,6 +13,29 @@ const ThankYou = () => {
         <title>Thank You | Contact Confirmation | HRX CPAs Irvine</title>
         <meta name="description" content="Thank you for contacting HRX CPAs. We'll respond within 4 business hours to discuss your tax planning, CFO services, or accounting needs." />
         <link rel="canonical" href="https://hrxcpas.com/thank-you" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Thank You | Message Received | HRX CPAs Contact Confirmation" />
+        <meta property="og:description" content="Thank you for contacting HRX CPAs. We'll respond within 4 business hours to discuss your tax planning, CFO services, or accounting needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/thank-you" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Thank You | Message Received | HRX CPAs Contact Confirmation" />
+        <meta name="twitter:description" content="Thank you for contacting HRX CPAs. We'll respond within 4 business hours to discuss your tax planning, CFO services, or accounting needs." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Logo - Thank You Message" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

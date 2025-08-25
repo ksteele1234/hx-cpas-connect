@@ -29,6 +29,29 @@ const About = () => {
         <meta name="description" content="Meet Hiren Parmar, CPA, CVA, CEPA, founder of HRX CPAs. 15+ years serving Orange County businesses with strategic tax planning, CFO services, and exit planning expertise." />
         <meta name="keywords" content="Hiren Parmar CPA, HRX CPAs about, Irvine CPA firm history, certified valuation analyst, exit planning advisor" />
         <link rel="canonical" href="https://hrxcpas.com/about" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="About HRX CPAs | Meet Hiren Parmar CPA, CVA, CEPA" />
+        <meta property="og:description" content="Meet Hiren Parmar, CPA, CVA, CEPA, founder of HRX CPAs. 15+ years serving Orange County businesses with strategic tax planning, CFO services, and exit planning expertise." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/about" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hiren-portrait.jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About HRX CPAs | Meet Hiren Parmar CPA, CVA, CEPA" />
+        <meta name="twitter:description" content="Meet Hiren Parmar, CPA, CVA, CEPA, founder of HRX CPAs. 15+ years serving Orange County businesses with strategic tax planning, CFO services, and exit planning expertise." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hiren-portrait.jpeg" />
+        <meta name="twitter:image:alt" content="Hiren Parmar, CPA, CVA, CEPA - Founder of HRX CPAs" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

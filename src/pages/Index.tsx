@@ -21,6 +21,30 @@ const Index = () => {
         <meta name="keywords" content="CPA firm Irvine, tax planning Irvine, CFO services Irvine, business accountant Irvine, virtual CFO Orange County, exit planning CPA" />
         <link rel="canonical" href="https://hrxcpas.com/" />
         
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="HRX CPAs | Expert CPA Firm in Irvine | Tax Planning & CFO Services" />
+        <meta property="og:description" content="Expert CPA firm in Irvine serving businesses $1M-$10M revenue & high-net-worth families. Tax planning, CFO consulting, bookkeeping & exit planning in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HRX CPAs | Expert CPA Firm in Irvine | Tax Planning & CFO Services" />
+        <meta name="twitter:description" content="Expert CPA firm in Irvine serving businesses $1M-$10M revenue & high-net-worth families. Tax planning, CFO consulting, bookkeeping & exit planning." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Logo - Expert CPA Firm in Irvine" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#1e40af" />
+        
         {/* Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
