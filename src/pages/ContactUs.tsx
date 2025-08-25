@@ -136,7 +136,7 @@ const ContactUs = () => {
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
                     data-form-name="Contact Us Form (on the website)"
-                    data-height="800"
+                    data-height="2906"
                     data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
                     data-form-id="kLopwZyWToh3Mfk6dT32"
                     title="Contact Us Form (on the website)"
