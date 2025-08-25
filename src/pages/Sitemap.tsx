@@ -47,7 +47,7 @@ const Sitemap = () => {
   ];
 
   const blogPosts = [
-    { title: "2024 Tax Planning Strategies for High-Income Professionals", path: "/blog/1" },
+    { title: "2025 Tax Planning Strategies for High-Income Professionals", path: "/blog/1" },
     { title: "R&D Tax Credits: Hidden Opportunities for Tech Companies", path: "/blog/2" },
     { title: "Estate Planning for Multi-Generational Families", path: "/blog/3" },
     { title: "Key Tax Law Changes for 2025: What Business Owners Need to Know", path: "/blog/4" },

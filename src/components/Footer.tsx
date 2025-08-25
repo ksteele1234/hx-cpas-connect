@@ -112,7 +112,7 @@ const Footer = () => {
                 <Button 
                   asChild
                   variant="outline" 
-                  className="w-full border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                  className="w-full border-primary-foreground text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600"
                 >
                   <Link to="/book-consultation">Book a Consultation</Link>
                 </Button>
@@ -127,7 +127,7 @@ const Footer = () => {
         <div className="container-width">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <div className="flex flex-col lg:flex-row items-center gap-4 text-sm text-primary-foreground/80">
-              <p>&copy; 2024 HRX CPAs. All rights reserved.</p>
+              <p>&copy; 2025 HRX CPAs. All rights reserved.</p>
               <div className="flex items-center gap-4">
                 <Link 
                   to="/ada-compliance" 
