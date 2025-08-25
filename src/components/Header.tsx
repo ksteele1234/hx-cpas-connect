@@ -159,7 +159,11 @@ const Header = () => {
 
             {/* Client Portal Button (Desktop) */}
             <div className="hidden lg:block">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" disabled>
+              <Button 
+                className="text-white hover:opacity-90" 
+                style={{ backgroundColor: 'rgba(109,160,202,255)' }}
+                disabled
+              >
                 Client Portal
               </Button>
             </div>
@@ -263,7 +267,8 @@ const Header = () => {
               
               <div className="pt-4 border-t border-border space-y-3">
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full text-white hover:opacity-90"
+                  style={{ backgroundColor: 'rgba(109,160,202,255)' }}
                   disabled
                 >
                   Client Portal
