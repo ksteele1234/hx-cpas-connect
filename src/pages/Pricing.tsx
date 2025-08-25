@@ -283,6 +283,29 @@ const Pricing = () => {
         <meta name="description" content="Transparent CPA pricing: Business services from $500/month, personal tax from $119/month. Bookkeeping, CFO services, tax planning & estate coordination." />
         <meta name="keywords" content="CPA pricing Irvine, tax preparation cost, CFO services pricing, bookkeeping rates Orange County, business tax cost" />
         <link rel="canonical" href="https://hrxcpas.com/pricing" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="CPA Services Pricing | Business & Personal Tax Packages | HRX CPAs" />
+        <meta property="og:description" content="Transparent CPA pricing: Business services from $500/month, personal tax from $119/month. Bookkeeping, CFO services, tax planning & estate coordination." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/pricing" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CPA Services Pricing | Business & Personal Tax Packages | HRX CPAs" />
+        <meta name="twitter:description" content="Transparent CPA pricing: Business services from $500/month, personal tax from $119/month. Bookkeeping, CFO services, tax planning & estate coordination." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Pricing and Service Packages" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
@@ -312,9 +335,9 @@ const Pricing = () => {
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="btn-outline" asChild>
-                  <a href="tel:+1-949-455-4842">
+                  <a href="tel:(949) 431-0469">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call (949) 455-4842
+                    Call (949) 431-0469
                   </a>
                 </Button>
               </div>

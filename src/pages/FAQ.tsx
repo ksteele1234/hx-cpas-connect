@@ -161,6 +161,29 @@ const FAQ = () => {
         <meta name="keywords" content="CPA FAQ Irvine, tax services questions, CFO consulting FAQ, bookkeeping questions, business tax FAQ Orange County" />
         <link rel="canonical" href="https://hrxcpas.com/faq" />
         
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Frequently Asked Questions | CPA Services FAQ | HRX CPAs" />
+        <meta property="og:description" content="Get answers to common questions about our CPA services, pricing, business packages, personal tax services, and CFO consulting. Learn more about HRX CPAs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/faq" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Frequently Asked Questions | CPA Services FAQ | HRX CPAs" />
+        <meta name="twitter:description" content="Get answers to common questions about our CPA services, pricing, business packages, personal tax services, and CFO consulting." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs FAQ and Support" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
+        
         {/* FAQ Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -307,8 +330,8 @@ const FAQ = () => {
                   Speak directly with our team
                 </p>
                 <Button variant="outline" size="sm" asChild>
-                  <a href="tel:+1234567890">
-                    (123) 456-7890
+                  <a href="tel:(949) 431-0469">
+                    (949) 431-0469
                   </a>
                 </Button>
               </Card>

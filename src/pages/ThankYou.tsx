@@ -111,10 +111,10 @@ const ThankYou = () => {
                     For urgent matters, call us directly
                   </p>
                   <a 
-                    href="tel:+1234567890" 
+                    href="tel:(949) 431-0469" 
                     className="text-primary hover:text-primary/80 font-semibold"
                   >
-                    (123) 456-7890
+                    (949) 431-0469
                   </a>
                 </CardContent>
               </Card>
