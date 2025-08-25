@@ -19,6 +19,14 @@ import Sitemap from "./pages/Sitemap";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ThankYou from "./pages/ThankYou";
+import Bookkeeping from "./pages/services/Bookkeeping";
+import TaxPlanningPrep from "./pages/services/TaxPlanningPrep";
+import CFOConsulting from "./pages/services/CFOConsulting";
+import EstatePlanningCoordination from "./pages/services/EstatePlanningCoordination";
+import BusinessValuation from "./pages/services/BusinessValuation";
+import ExitPlanning from "./pages/services/ExitPlanning";
+import FullServiceAccountingPayroll from "./pages/services/FullServiceAccountingPayroll";
+import BuyerDueDiligence from "./pages/services/BuyerDueDiligence";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +54,15 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          {/* Service Pages */}
+          <Route path="/services/bookkeeping" element={<Bookkeeping />} />
+          <Route path="/services/tax-planning-prep" element={<TaxPlanningPrep />} />
+          <Route path="/services/cfo-consulting" element={<CFOConsulting />} />
+          <Route path="/services/estate-planning-coordination" element={<EstatePlanningCoordination />} />
+          <Route path="/services/business-valuation" element={<BusinessValuation />} />
+          <Route path="/services/exit-planning" element={<ExitPlanning />} />
+          <Route path="/services/full-service-accounting-payroll" element={<FullServiceAccountingPayroll />} />
+          <Route path="/services/buyer-due-diligence" element={<BuyerDueDiligence />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

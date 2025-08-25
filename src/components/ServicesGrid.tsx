@@ -17,37 +17,37 @@ const ServicesGrid = () => {
       icon: <FileText className="w-8 h-8 text-primary" />,
       title: "Bookkeeping",
       outcome: "Monthly financials delivered within 10 business days",
-      href: "/business-services#bookkeeping"
+      href: "/services/bookkeeping"
     },
     {
       icon: <Calculator className="w-8 h-8 text-primary" />,
       title: "Tax Planning and Preparation",
       outcome: "Strategic planning to minimize your annual tax burden",
-      href: "/business-services#tax-planning"
+      href: "/services/tax-planning-prep"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-primary" />,
       title: "CFO Consulting",
       outcome: "Executive-level financial insights for business growth",
-      href: "/business-services#cfo-consulting"
+      href: "/services/cfo-consulting"
     },
     {
       icon: <Shield className="w-8 h-8 text-primary" />,
       title: "Estate Planning Coordination",
       outcome: "Seamless coordination with your estate planning attorney",
-      href: "/personal-services#estate-planning"
+      href: "/services/estate-planning-coordination"
     },
     {
       icon: <DollarSign className="w-8 h-8 text-primary" />,
       title: "Business Valuations",
       outcome: "Professional valuations for transactions and planning",
-      href: "/business-services#business-valuation"
+      href: "/services/business-valuation"
     },
     {
       icon: <Target className="w-8 h-8 text-primary" />,
       title: "Exit Planning",
       outcome: "Maximize business value for your eventual exit strategy",
-      href: "/business-services#exit-planning"
+      href: "/services/exit-planning"
     }
   ];
 
