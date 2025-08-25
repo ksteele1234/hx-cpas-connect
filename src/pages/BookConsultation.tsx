@@ -158,58 +158,16 @@ const BookConsultation = () => {
                   </p>
                 </div>
 
-                {/* Calendar Embed Placeholder */}
-                <Card className="card-elegant p-8">
-                  <div className="text-center space-y-6">
-                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                      <Calendar className="w-12 h-12 text-primary" />
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">Interactive Calendar</h3>
-                      <p className="text-muted-foreground mb-6">
-                        Our booking calendar will be embedded here, allowing you to select 
-                        available times directly from Hiren's schedule.
-                      </p>
-                    </div>
-
-                    {/* Placeholder booking interface */}
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-7 gap-2 text-center">
-                        <div className="text-xs font-medium text-muted-foreground p-2">Sun</div>
-                        <div className="text-xs font-medium text-muted-foreground p-2">Mon</div>
-                        <div className="text-xs font-medium text-muted-foreground p-2">Tue</div>
-                        <div className="text-xs font-medium text-muted-foreground p-2">Wed</div>
-                        <div className="text-xs font-medium text-muted-foreground p-2">Thu</div>
-                        <div className="text-xs font-medium text-muted-foreground p-2">Fri</div>
-                        <div className="text-xs font-medium text-muted-foreground p-2">Sat</div>
-                      </div>
-                      
-                      <div className="grid grid-cols-7 gap-2">
-                        {[...Array(35)].map((_, i) => (
-                          <div 
-                            key={i} 
-                            className={`p-2 text-sm rounded cursor-pointer transition-colors ${
-                              i > 5 && i < 30 && i % 7 !== 0 && i % 7 !== 6
-                                ? 'hover:bg-primary hover:text-primary-foreground bg-surface' 
-                                : 'text-muted-foreground/50'
-                            }`}
-                          >
-                            {i > 5 && i < 30 ? i - 5 : ''}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="pt-6 border-t border-border">
-                      <p className="text-sm text-muted-foreground mb-4">
-                        <strong>Available Hours:</strong> Monday-Thursday, 10:00 AM - 4:00 PM PST
-                      </p>
-                      <Button className="btn-primary" size="lg">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        Schedule Consultation
-                      </Button>
-                    </div>
+                {/* Calendar Embed */}
+                <Card className="card-elegant p-6">
+                  <div className="w-full min-h-[600px]">
+                    <iframe 
+                      src="https://api.leadconnectorhq.com/widget/booking/LSC09oG5ynpJHXJKysin" 
+                      style={{width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px'}} 
+                      scrolling="no" 
+                      id="LSC09oG5ynpJHXJKysin_1756073382852"
+                      title="Book Consultation with Hiren Parmer"
+                    ></iframe>
                   </div>
                 </Card>
 

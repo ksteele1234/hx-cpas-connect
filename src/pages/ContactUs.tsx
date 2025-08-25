@@ -123,186 +123,26 @@ const ContactUs = () => {
                   </p>
                 </div>
 
-                <Card className="card-elegant p-8">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Name Fields */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
-                          First Name *
-                        </label>
-                        <Input
-                          id="firstName"
-                          name="firstName"
-                          type="text"
-                          required
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          className="w-full"
-                          placeholder="John"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
-                          Last Name *
-                        </label>
-                        <Input
-                          id="lastName"
-                          name="lastName"
-                          type="text"
-                          required
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          className="w-full"
-                          placeholder="Smith"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Email and Phone */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                          Email Address *
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          className="w-full"
-                          placeholder="john@company.com"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                          Phone Number
-                        </label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          className="w-full"
-                          placeholder="(949) 555-0123"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Company */}
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                        Company / Organization
-                      </label>
-                      <Input
-                        id="company"
-                        name="company"
-                        type="text"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full"
-                        placeholder="Your Company Name"
-                      />
-                    </div>
-
-                    {/* Service Interest */}
-                    <div>
-                      <label htmlFor="serviceInterest" className="block text-sm font-medium text-foreground mb-2">
-                        Service Interest *
-                      </label>
-                      <select
-                        id="serviceInterest"
-                        name="serviceInterest"
-                        required
-                        value={formData.serviceInterest}
-                        onChange={handleInputChange}
-                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                      >
-                        <option value="">Please select a service</option>
-                        {serviceOptions.map((service) => (
-                          <option key={service} value={service}>
-                            {service}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {/* Message */}
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                        Message *
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        required
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        className="w-full min-h-[120px]"
-                        placeholder="Please tell us about your needs, current situation, and any specific questions you have..."
-                      />
-                    </div>
-
-                    {/* Consent and Newsletter */}
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <Checkbox
-                          id="consent"
-                          checked={formData.consent}
-                          onCheckedChange={(checked) => handleCheckboxChange('consent', !!checked)}
-                          required
-                        />
-                        <label htmlFor="consent" className="text-sm text-muted-foreground leading-relaxed">
-                          I consent to HRX CPAs contacting me about my inquiry via email or phone. 
-                          I understand this consent is not required to purchase services. *
-                        </label>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <Checkbox
-                          id="newsletter"
-                          checked={formData.newsletter}
-                          onCheckedChange={(checked) => handleCheckboxChange('newsletter', !!checked)}
-                        />
-                        <label htmlFor="newsletter" className="text-sm text-muted-foreground leading-relaxed">
-                          I would like to receive occasional tax tips and financial insights via email.
-                        </label>
-                      </div>
-                    </div>
-
-                    {/* reCAPTCHA Placeholder */}
-                    <div className="p-4 border border-border rounded-lg bg-surface/50">
-                      <div className="flex items-center gap-3">
-                        <Shield className="w-5 h-5 text-primary" />
-                        <span className="text-sm text-muted-foreground">
-                          This form is protected by reCAPTCHA and spam protection
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Submit Button */}
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full btn-primary"
-                      disabled={isSubmitting || !formData.consent}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin mr-2"></div>
-                          Sending Message...
-                        </>
-                      ) : (
-                        <>
-                          <MessageCircle className="w-5 h-5 mr-2" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
+                <Card className="card-elegant p-6">
+                  <div className="w-full min-h-[600px]">
+                    <iframe
+                      src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
+                      style={{width: '100%', height: '100%', border: 'none', borderRadius: '15px', minHeight: '743px'}}
+                      id="inline-kLopwZyWToh3Mfk6dT32" 
+                      data-layout="{'id':'INLINE'}"
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="Contact Us Form (on the website)"
+                      data-height="743"
+                      data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
+                      data-form-id="kLopwZyWToh3Mfk6dT32"
+                      title="Contact Us Form (on the website)"
+                    ></iframe>
+                  </div>
                 </Card>
               </div>
 
