@@ -161,7 +161,7 @@ const BusinessServices = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="section-padding bg-gradient-elegant text-white">
+        <section className="section-padding bg-gradient-hero text-white">
           <div className="container-width">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
