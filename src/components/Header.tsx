@@ -51,7 +51,7 @@ const Header = () => {
                 <img 
                   src={hrxLogo} 
                   alt="HRX CPAs Logo" 
-                  className="h-12 w-auto"
+                  className="h-16 w-auto min-w-[200px]"
                 />
               </a>
             </div>
