@@ -38,13 +38,14 @@ export default defineConfig(({ mode }) => ({
           }
           return 'assets/[name]-[hash].[ext]';
         },
+
         manualChunks: {
           // Vendor libraries (changes less frequently)
           vendor: ['react', 'react-dom', 'react-router-dom'],
           // UI components (moderate change frequency)
           ui: [
-            '@radix-ui/react-accordion', 
-            '@radix-ui/react-dialog', 
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
             '@radix-ui/react-popover',
             '@radix-ui/react-select',
@@ -59,11 +60,11 @@ export default defineConfig(({ mode }) => ({
         }
       },
       // Tree shaking optimization
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        unknownGlobalSideEffects: false
-      }
+      // treeshake: {
+      //   moduleSideEffects: false,
+      //   propertyReadSideEffects: false,
+      //   unknownGlobalSideEffects: false
+      // }
     },
     // Enable compression reporting
     reportCompressedSize: true,
@@ -77,9 +78,9 @@ export default defineConfig(({ mode }) => ({
   // Dependency optimization for faster dev builds
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
-      'react-router-dom', 
+      'react',
+      'react-dom',
+      'react-router-dom',
       'lucide-react',
       '@radix-ui/react-accordion',
       '@radix-ui/react-dialog',
