@@ -107,7 +107,11 @@ const ContactUs = () => {
         <meta name="theme-color" content="#1e40af" />
         
         {/* Go High Level Form Script */}
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        <script 
+          src="https://link.msgsndr.com/js/form_embed.js"
+          onLoad={() => console.log('GHL script loaded successfully')}
+          onError={() => console.error('Failed to load GHL script')}
+        ></script>
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
@@ -178,6 +182,10 @@ const ContactUs = () => {
                     data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
                     data-form-id="kLopwZyWToh3Mfk6dT32"
                     title="Contact Us Form (on the website)"
+                    allow="clipboard-write; web-share"
+                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
+                    onLoad={() => console.log('GHL iframe loaded successfully')}
+                    onError={() => console.error('Failed to load GHL iframe')}
                   ></iframe>
                 </Card>
               </div>
