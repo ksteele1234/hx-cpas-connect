@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Calculator, 
   TrendingUp, 
@@ -259,6 +265,59 @@ const TaxPlanningPrep = () => {
                 </div>
               </div>
             </Card>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              Frequently Asked Questions
+            </h2>
+            
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>What makes your tax planning different from basic tax preparation?</AccordionTrigger>
+                <AccordionContent>
+                  Tax preparation is reactive - filing last year's return. Tax planning is proactive - strategically managing your tax burden throughout the year and across multiple years. We provide quarterly reviews, strategic entity structuring, timing strategies, and year-round guidance to minimize your lifetime tax burden.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2">
+                <AccordionTrigger>How much can I realistically save with strategic tax planning?</AccordionTrigger>
+                <AccordionContent>
+                  Most clients see a 15-30% reduction in their effective tax rate, with average annual savings of $50,000+. High-income earners and business owners often save significantly more through entity optimization, timing strategies, and credit maximization. The exact savings depend on your income level, business structure, and current tax situation.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Do you provide IRS audit support?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, all our tax planning clients receive complete IRS audit support and representation. If you're audited, we'll handle all communications with the IRS, prepare necessary documentation, and represent you throughout the process. Our meticulous planning and documentation preparation significantly reduces audit risk.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4">
+                <AccordionTrigger>What business entities do you work with?</AccordionTrigger>
+                <AccordionContent>
+                  We work with all business structures including sole proprietorships, partnerships, LLCs, S-Corps, C-Corps, and multi-entity structures. We specialize in optimizing entity elections (like S-Corp elections for LLCs) and can help restructure your business for maximum tax efficiency.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5">
+                <AccordionTrigger>How do quarterly planning sessions work?</AccordionTrigger>
+                <AccordionContent>
+                  Every quarter, we review your financial performance, tax position, and upcoming opportunities. We calculate estimated tax payments, identify timing strategies for income and expenses, review potential deductions, and adjust our strategy based on tax law changes or business developments. This proactive approach ensures you're never surprised at year-end.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-6">
+                <AccordionTrigger>Can you help with multi-state tax issues?</AccordionTrigger>
+                <AccordionContent>
+                  Absolutely. Multi-state taxation is one of our specialties. We help with residency planning, income allocation, reciprocity agreements, and state-specific tax strategies. Whether you live in one state and work in another, have rental properties across states, or are considering relocating, we ensure compliance while minimizing your total state tax burden.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 

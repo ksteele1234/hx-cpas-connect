@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Building, 
   CheckCircle,
@@ -346,6 +352,62 @@ const RentalK1Support = () => {
                   <p className="text-sm text-muted-foreground">Connected to top advisors</p>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-padding bg-muted/50">
+          <div className="container-width">
+            <div className="text-center mb-12">
+              <h2 className="text-section-title">Frequently Asked Questions</h2>
+              <p className="text-subtitle">Common questions about rental property and K-1 tax services</p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>What records do I need to keep for my rental properties?</AccordionTrigger>
+                  <AccordionContent>
+                    Keep detailed records of all rental income, expenses (repairs, maintenance, management fees, insurance, utilities), capital improvements, depreciation schedules, and tenant communications. We recommend using property management software or a dedicated bookkeeping system to track everything systematically.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How do K-1s from partnerships affect my personal taxes?</AccordionTrigger>
+                  <AccordionContent>
+                    K-1s report your share of partnership income, losses, deductions, and credits that flow through to your personal tax return. This can include rental income, business income, and various tax credits. The complexity varies greatly depending on the partnership structure and activities, which is why professional preparation is crucial.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Can I deduct property management fees and other rental expenses?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, most ordinary and necessary rental property expenses are deductible including property management fees, repairs, maintenance, insurance, property taxes, utilities, advertising, and professional services. However, capital improvements must be depreciated over time rather than deducted immediately.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>What's the difference between repairs and improvements for tax purposes?</AccordionTrigger>
+                  <AccordionContent>
+                    Repairs maintain the property's condition and are fully deductible in the year incurred (fixing a leak, painting). Improvements add value or extend the property's life and must be depreciated over 27.5 years for residential rentals (new roof, HVAC system). Proper classification significantly impacts your tax liability.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>How does depreciation work for rental properties?</AccordionTrigger>
+                  <AccordionContent>
+                    Residential rental properties are depreciated over 27.5 years using straight-line depreciation. You can depreciate the building but not the land. When you sell, you'll pay depreciation recapture tax on the amount depreciated. We help optimize depreciation strategies and plan for eventual sale implications.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>What happens if my rental shows a loss on my tax return?</AccordionTrigger>
+                  <AccordionContent>
+                    Rental losses can offset other passive income, but may be limited by passive activity loss rules if you're not a real estate professional. However, you may be able to deduct up to $25,000 in rental losses against ordinary income if your adjusted gross income is under $100,000 and you actively participate in the rental activity.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>

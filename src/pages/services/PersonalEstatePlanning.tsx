@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Shield, 
   CheckCircle,
@@ -369,6 +375,62 @@ const PersonalEstatePlanning = () => {
                 </div>
               </div>
             </Card>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-padding bg-muted/50">
+          <div className="container-width">
+            <div className="text-center mb-12">
+              <h2 className="text-section-title">Frequently Asked Questions</h2>
+              <p className="text-subtitle">Common questions about personal estate planning coordination</p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>What's the difference between estate planning and tax planning?</AccordionTrigger>
+                  <AccordionContent>
+                    Estate planning focuses on asset transfer, guardianship, and end-of-life decisions through wills, trusts, and powers of attorney. Tax planning optimizes the tax implications of these transfers. We coordinate both aspects to ensure your estate plan is both legally sound and tax-efficient, working closely with your estate attorney.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Do I need estate planning if I'm not wealthy?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, estate planning isn't just for the ultra-wealthy. Everyone needs basic documents like wills, powers of attorney, and healthcare directives. If you have retirement accounts, life insurance, or own a home, proper planning ensures these assets transfer efficiently and can save your family significant time, stress, and money.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>How often should I update my estate plan?</AccordionTrigger>
+                  <AccordionContent>
+                    Review your estate plan every 3-5 years or after major life events (marriage, divorce, births, deaths, significant asset changes, moves to different states). Tax law changes also warrant reviews. We provide ongoing monitoring to identify when updates are needed and coordinate with your attorney for modifications.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>What's the current federal estate tax exemption?</AccordionTrigger>
+                  <AccordionContent>
+                    For 2024, the federal estate tax exemption is $13.61 million per person ($27.22 million for married couples). However, this is scheduled to sunset in 2025, potentially dropping to around $6-7 million. State estate taxes may apply at lower thresholds. We help plan for both current law and potential changes.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Should I set up a trust?</AccordionTrigger>
+                  <AccordionContent>
+                    Trusts can provide benefits including probate avoidance, privacy, tax planning, and asset protection. The decision depends on your assets, family situation, and goals. Common scenarios include revocable living trusts for probate avoidance, irrevocable trusts for tax planning, and special needs trusts for disabled beneficiaries. We analyze your situation to determine if trusts make sense.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>How do you coordinate with my estate planning attorney?</AccordionTrigger>
+                  <AccordionContent>
+                    We work as part of your advisory team, providing tax analysis for proposed estate planning strategies, helping implement tax-efficient funding of trusts, preparing gift and estate tax returns, and ensuring your overall financial plan aligns with your estate plan. This collaborative approach ensures both legal compliance and tax optimization.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </section>
 

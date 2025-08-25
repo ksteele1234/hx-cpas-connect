@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Shield, 
   Users,
@@ -307,6 +313,59 @@ const EstatePlanningCoordination = () => {
                 </div>
               </div>
             </Card>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              Frequently Asked Questions
+            </h2>
+            
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>How do you coordinate with my existing estate planning attorney?</AccordionTrigger>
+                <AccordionContent>
+                  We work collaboratively with your estate planning team, providing tax analysis for proposed strategies, implementing tax-efficient trust funding, and ensuring your business succession plan aligns with personal estate goals. We respect attorney-client privilege while providing essential financial and tax expertise to optimize your overall plan.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2">
+                <AccordionTrigger>What's included in business succession planning?</AccordionTrigger>
+                <AccordionContent>
+                  We help develop strategies for transferring business ownership including buy-sell agreements, family limited partnerships, employee stock ownership plans (ESOPs), management buyouts, and third-party sales. This includes valuation planning, tax optimization, and coordination with your estate plan to minimize overall tax burden.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3">
+                <AccordionTrigger>How do you help minimize estate taxes for business owners?</AccordionTrigger>
+                <AccordionContent>
+                  We use strategies like grantor retained annuity trusts (GRATs), charitable remainder trusts, family limited partnerships with valuation discounts, annual gifting programs, and business structure optimization. The key is starting early and coordinating these strategies with your overall business and personal financial plan.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4">
+                <AccordionTrigger>When should I start estate planning for my business?</AccordionTrigger>
+                <AccordionContent>
+                  The best time is now, regardless of your business size. Early planning allows for more strategic options and better tax benefits. If your business is worth over $1M or growing rapidly, estate planning becomes critical. Waiting until retirement or health issues arise significantly limits your options and increases costs.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5">
+                <AccordionTrigger>What's the difference between personal and business estate planning?</AccordionTrigger>
+                <AccordionContent>
+                  Personal estate planning focuses on family wealth transfer and personal assets. Business estate planning addresses business succession, key employee retention, buy-sell agreements, and coordinating business value with overall estate plan. For business owners, both must work together to achieve optimal results and tax efficiency.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-6">
+                <AccordionTrigger>How do you handle multi-generational business planning?</AccordionTrigger>
+                <AccordionContent>
+                  We develop comprehensive strategies that address current ownership transition, next-generation preparation, family governance structures, and long-term wealth preservation. This includes education for rising generations, family employment policies, dividend policies, and structures that maintain family harmony while ensuring business success.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 

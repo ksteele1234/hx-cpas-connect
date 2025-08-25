@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Calculator, 
   TrendingUp, 
@@ -265,6 +271,59 @@ const Bookkeeping = () => {
                 </Button>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              Frequently Asked Questions
+            </h2>
+            
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>What's included in your bookkeeping service?</AccordionTrigger>
+                <AccordionContent>
+                  We provide complete monthly bookkeeping including bank reconciliation, transaction categorization, accounts receivable/payable management, monthly financial statements (P&L, balance sheet, cash flow), sales tax preparation, and 1099 contractor reporting. Everything is delivered within 10 business days each month.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2">
+                <AccordionTrigger>How quickly do you close the books each month?</AccordionTrigger>
+                <AccordionContent>
+                  We guarantee delivery of your complete financial package within 10 business days of month-end. Most clients receive their financials within 7 business days. This fast turnaround gives you timely insights to make informed business decisions.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3">
+                <AccordionTrigger>What accounting software do you use?</AccordionTrigger>
+                <AccordionContent>
+                  We primarily work with QuickBooks Online, Xero, and other cloud-based platforms. If you're already using a system, we can likely work with it. If you're starting fresh, we'll recommend the best platform based on your business needs and help with setup and training.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Do you handle sales tax filing?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, sales tax preparation and filing is included in our Professional and Enterprise packages. We'll calculate your sales tax liability, prepare the returns, and can handle the filing process to ensure you stay compliant with all jurisdictions where you collect sales tax.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Can you clean up books from previous years?</AccordionTrigger>
+                <AccordionContent>
+                  Absolutely. We offer catch-up bookkeeping services to clean up and organize prior periods. This ensures your historical data is accurate before we begin ongoing monthly services. We'll provide a separate proposal for catch-up work based on the scope required.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-6">
+                <AccordionTrigger>How do you ensure accuracy and quality control?</AccordionTrigger>
+                <AccordionContent>
+                  Every client's books go through our multi-step review process. Initial work is completed by experienced bookkeepers, then reviewed by senior staff, and finally approved by our CPA. We also maintain detailed documentation and follow standardized procedures to ensure consistency and accuracy.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 

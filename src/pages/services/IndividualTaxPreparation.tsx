@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Calculator, 
   CheckCircle,
@@ -313,6 +319,62 @@ const IndividualTaxPreparation = () => {
                   </Button>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-padding bg-muted/50">
+          <div className="container-width">
+            <div className="text-center mb-12">
+              <h2 className="text-section-title">Frequently Asked Questions</h2>
+              <p className="text-subtitle">Common questions about our individual tax services</p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>What's included in the monthly service fee?</AccordionTrigger>
+                  <AccordionContent>
+                    Your monthly fee covers complete tax preparation, filing, ongoing planning support, IRS transcript monitoring, withholding optimization, and year-round access to our team for tax questions. There are no surprise fees during tax season - everything is included in your monthly subscription.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How does this compare to traditional tax preparation services?</AccordionTrigger>
+                  <AccordionContent>
+                    Traditional services charge $400-2,000+ annually for preparation only. Our monthly model provides year-round support, proactive planning, and comprehensive service starting at just $119/month. You get ongoing relationship, not just transactional preparation, plus significant savings for most clients.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Can you handle multi-state tax situations?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, we specialize in multi-state taxation. Our Professional Plus and Private Wealth packages include multi-state returns. We handle residency issues, income allocation, state-specific deductions, and ensure compliance across all states where you have tax obligations.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>What happens if I get audited?</AccordionTrigger>
+                  <AccordionContent>
+                    All our clients receive audit support and representation. We'll handle all IRS communications, prepare documentation, and represent you throughout the process. Our Private Wealth package includes comprehensive audit response as a standard feature.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>How do you handle RSU and stock option taxation?</AccordionTrigger>
+                  <AccordionContent>
+                    We specialize in equity compensation planning. This includes RSU timing strategies, stock option exercise planning, ESPP optimization, and coordinating with your company's equity plans. We help minimize the tax impact of equity compensation while maximizing your financial benefit.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>When do I need to upgrade to a higher service level?</AccordionTrigger>
+                  <AccordionContent>
+                    Upgrade to Professional Plus if you have RSUs, rental property, significant itemized deductions, or income over $200K. Consider Private Wealth if you have multiple states, substantial investments, complex K-1s, or need quarterly planning calls. We'll recommend the right level based on your situation.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>

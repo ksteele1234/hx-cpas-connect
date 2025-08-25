@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   TrendingUp, 
   BarChart,
@@ -299,6 +305,59 @@ const CFOConsulting = () => {
                 </div>
               </div>
             </Card>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+              Frequently Asked Questions
+            </h2>
+            
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>What's the difference between CFO consulting and traditional accounting?</AccordionTrigger>
+                <AccordionContent>
+                  Traditional accounting focuses on recording transactions and compliance. CFO consulting provides strategic financial leadership including forecasting, KPI analysis, funding strategies, and business growth planning. We help you understand what your numbers mean and how to use them to drive business decisions and growth.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Do I need a full-time CFO or is consulting better?</AccordionTrigger>
+                <AccordionContent>
+                  For most businesses under $10M revenue, fractional CFO consulting is more cost-effective than a full-time hire. You get executive-level expertise without the $200K+ salary and benefits. As you grow beyond $10-15M in revenue, you might consider transitioning to a full-time CFO, and we can help with that transition.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-3">
+                <AccordionTrigger>How do you help with fundraising and investor relations?</AccordionTrigger>
+                <AccordionContent>
+                  We prepare comprehensive financial packages including historical financials, projections, and investor-ready presentations. We help structure deals, model different funding scenarios, and provide ongoing financial reporting that meets investor expectations. Our experience includes debt financing, equity raises, and M&A transactions.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-4">
+                <AccordionTrigger>What industries do you specialize in?</AccordionTrigger>
+                <AccordionContent>
+                  We work across many industries including technology, professional services, manufacturing, real estate, and healthcare. Our focus is on businesses with $1M-$10M in revenue that need strategic financial guidance. Each industry has unique challenges, and we adapt our approach to your specific sector's needs and metrics.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-5">
+                <AccordionTrigger>How quickly can you help improve our financial performance?</AccordionTrigger>
+                <AccordionContent>
+                  Most clients see immediate improvements in financial visibility and decision-making within the first month. Operational improvements typically show results within 2-3 months, while strategic initiatives and major process improvements can take 6-12 months to fully implement. We provide both quick wins and long-term strategic value.
+                </AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-6">
+                <AccordionTrigger>What's included in your monthly CFO consulting package?</AccordionTrigger>
+                <AccordionContent>
+                  Our packages include monthly financial analysis and reporting, KPI dashboards, cash flow forecasting, budget vs. actual analysis, quarterly business reviews, unlimited email/phone support, and strategic project work. We customize the service level based on your business size and complexity.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 

@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   TrendingUp, 
   CheckCircle,
@@ -331,6 +337,62 @@ const RSUEquityPlanning = () => {
                   <p className="text-sm text-muted-foreground">Pre-IPO planning</p>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-padding bg-muted/50">
+          <div className="container-width">
+            <div className="text-center mb-12">
+              <h2 className="text-section-title">Frequently Asked Questions</h2>
+              <p className="text-subtitle">Common questions about RSU and equity compensation planning</p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>When should I sell my RSUs after they vest?</AccordionTrigger>
+                  <AccordionContent>
+                    There's no one-size-fits-all answer. The decision depends on your overall financial situation, tax bracket, stock price trends, and diversification goals. We help you create a systematic selling strategy that balances tax efficiency with risk management, often including scheduled sales regardless of stock price to avoid emotional decision-making.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How are RSUs taxed differently from stock options?</AccordionTrigger>
+                  <AccordionContent>
+                    RSUs are taxed as ordinary income when they vest (W-2 income), while stock options are typically taxed when exercised. RSUs have no exercise price - you receive the full stock value. ISOs can qualify for capital gains treatment if holding periods are met, while RSUs are always ordinary income at vest, then capital gains on any appreciation after vesting.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Should I make an 83(b) election for my equity compensation?</AccordionTrigger>
+                  <AccordionContent>
+                    83(b) elections are typically relevant for restricted stock (not RSUs) and certain stock options. The election allows you to pay taxes upfront on the grant value, potentially converting future appreciation to capital gains. This decision must be made within 30 days of grant and requires careful analysis of your situation and stock prospects.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>How do I minimize taxes on my equity compensation?</AccordionTrigger>
+                  <AccordionContent>
+                    Strategies include timing sales for optimal tax brackets, using tax-loss harvesting, contributing to retirement accounts to offset income, charitable giving with appreciated stock, and coordinating with other income sources. For executives, deferred compensation plans might also be beneficial. Each strategy depends on your specific circumstances.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>What happens to my equity if I leave the company?</AccordionTrigger>
+                  <AccordionContent>
+                    This depends on your specific grant agreements. Typically, unvested RSUs are forfeited, while vested RSUs remain yours. Stock options usually have exercise deadlines (often 90 days post-termination). Some companies offer acceleration in certain situations. We review your agreements to help you understand your options and optimal timing.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>How should equity compensation fit into my overall financial plan?</AccordionTrigger>
+                  <AccordionContent>
+                    Equity compensation should be integrated with your broader financial goals including emergency funds, retirement planning, debt management, and investment diversification. We help ensure you're not over-concentrated in company stock and that your equity strategy supports your long-term financial objectives, including major purchases and retirement planning.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>
