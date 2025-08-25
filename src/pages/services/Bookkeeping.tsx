@@ -35,6 +35,29 @@ const Bookkeeping = () => {
         <meta name="description" content="Professional bookkeeping services for businesses: monthly financials within 10 days, bank reconciliation, financial statements & sales tax filing in Orange County." />
         <meta name="keywords" content="bookkeeping services Irvine, monthly financial statements, business bookkeeping Orange County, QuickBooks setup, sales tax filing" />
         <link rel="canonical" href="https://hrxcpas.com/services/bookkeeping" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Bookkeeping Services | Monthly Financials in 10 Days | HRX CPAs" />
+        <meta property="og:description" content="Professional bookkeeping services for businesses: monthly financials within 10 days, bank reconciliation, financial statements & sales tax filing in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/bookkeeping" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bookkeeping Services | Monthly Financials in 10 Days | HRX CPAs" />
+        <meta name="twitter:description" content="Professional bookkeeping services for businesses: monthly financials within 10 days, bank reconciliation, financial statements & sales tax filing." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Bookkeeping Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

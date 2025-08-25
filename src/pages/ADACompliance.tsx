@@ -13,6 +13,9 @@ const ADACompliance = () => {
         <title>ADA Compliance Statement | Website Accessibility | HRX CPAs Irvine</title>
         <meta name="description" content="HRX CPAs ADA compliance statement: Our commitment to website accessibility, WCAG guidelines compliance, and inclusive design for all users and disabilities." />
         <link rel="canonical" href="https://hrxcpas.com/ada-compliance" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

@@ -103,6 +103,29 @@ const BookConsultation = () => {
         <title>Book Consultation | Schedule CPA Meeting | HRX CPAs Irvine</title>
         <meta name="description" content="Schedule your complimentary consultation with HRX CPAs. Discuss tax planning, CFO services, bookkeeping, and business growth strategies with our expert team in Irvine." />
         <link rel="canonical" href="https://hrxcpas.com/book-consultation" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Book Consultation | Schedule CPA Meeting | HRX CPAs" />
+        <meta property="og:description" content="Schedule your complimentary consultation with HRX CPAs. Discuss tax planning, CFO services, bookkeeping, and business growth strategies with our expert team in Irvine." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/book-consultation" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book Consultation | Schedule CPA Meeting | HRX CPAs" />
+        <meta name="twitter:description" content="Schedule your complimentary consultation with HRX CPAs. Discuss tax planning, CFO services, bookkeeping, and business growth strategies." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Consultation Booking" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

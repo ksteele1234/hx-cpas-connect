@@ -77,6 +77,29 @@ const BusinessServices = () => {
         <meta name="description" content="Comprehensive business services for $1M-$10M revenue companies: CFO consulting, tax planning, bookkeeping, exit planning & business valuations in Orange County." />
         <meta name="keywords" content="business CFO services Irvine, business tax planning Orange County, bookkeeping services Irvine, exit planning CPA, business valuation services" />
         <link rel="canonical" href="https://hrxcpas.com/business-services" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Business Services | CFO Consulting, Tax Planning & Bookkeeping | HRX CPAs" />
+        <meta property="og:description" content="Comprehensive business services for $1M-$10M revenue companies: CFO consulting, tax planning, bookkeeping, exit planning & business valuations in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/business-services" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Business Services | CFO Consulting, Tax Planning & Bookkeeping | HRX CPAs" />
+        <meta name="twitter:description" content="Comprehensive business services for $1M-$10M revenue companies: CFO consulting, tax planning, bookkeeping, exit planning & business valuations." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Business Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

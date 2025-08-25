@@ -36,6 +36,29 @@ const TaxPlanningPrep = () => {
         <meta name="description" content="Proactive tax planning services: quarterly sessions, entity optimization, credit maximization. Save 15-30% on taxes with strategic year-round planning in Orange County." />
         <meta name="keywords" content="tax planning Irvine, strategic tax preparation, business tax optimization, entity structure planning, R&D tax credits Orange County" />
         <link rel="canonical" href="https://hrxcpas.com/services/tax-planning-prep" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Strategic Tax Planning & Preparation | Reduce Tax Burden 15-30% | HRX CPAs" />
+        <meta property="og:description" content="Proactive tax planning services: quarterly sessions, entity optimization, credit maximization. Save 15-30% on taxes with strategic year-round planning in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/tax-planning-prep" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Strategic Tax Planning & Preparation | Reduce Tax Burden 15-30% | HRX CPAs" />
+        <meta name="twitter:description" content="Proactive tax planning services: quarterly sessions, entity optimization, credit maximization. Save 15-30% on taxes with strategic year-round planning." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Tax Planning Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

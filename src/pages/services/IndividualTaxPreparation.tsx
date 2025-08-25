@@ -132,6 +132,29 @@ const IndividualTaxPreparation = () => {
         <title>Individual Tax Preparation | Personal Tax Services | HRX CPAs Irvine</title>
         <meta name="description" content="Comprehensive individual tax preparation for high-income professionals: monthly packages from $119, RSU planning, multi-state returns, audit support in Orange County." />
         <link rel="canonical" href="https://hrxcpas.com/services/individual-tax-preparation" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Individual Tax Preparation | Personal Tax Services | HRX CPAs" />
+        <meta property="og:description" content="Comprehensive individual tax preparation for high-income professionals: monthly packages from $119, RSU planning, multi-state returns, audit support in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/individual-tax-preparation" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Individual Tax Preparation | Personal Tax Services | HRX CPAs" />
+        <meta name="twitter:description" content="Comprehensive individual tax preparation for high-income professionals: monthly packages from $119, RSU planning, multi-state returns, audit support." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Individual Tax Preparation Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

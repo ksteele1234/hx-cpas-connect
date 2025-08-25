@@ -33,6 +33,29 @@ const CFOConsulting = () => {
         <title>CFO Consulting Services | Virtual CFO | Financial Advisory | HRX CPAs Irvine</title>
         <meta name="description" content="Fractional CFO services for $1M-$10M businesses: financial planning, KPI dashboards, fundraising support, business growth strategies in Orange County." />
         <link rel="canonical" href="https://hrxcpas.com/services/cfo-consulting" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="CFO Consulting Services | Virtual CFO | Financial Advisory | HRX CPAs" />
+        <meta property="og:description" content="Fractional CFO services for $1M-$10M businesses: financial planning, KPI dashboards, fundraising support, business growth strategies in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/services/cfo-consulting" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CFO Consulting Services | Virtual CFO | Financial Advisory | HRX CPAs" />
+        <meta name="twitter:description" content="Fractional CFO services for $1M-$10M businesses: financial planning, KPI dashboards, fundraising support, business growth strategies." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs CFO Consulting Services" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />

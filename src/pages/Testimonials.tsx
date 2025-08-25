@@ -127,6 +127,29 @@ const Testimonials = () => {
         <title>Client Testimonials | Success Stories | HRX CPAs Irvine Reviews</title>
         <meta name="description" content="Read client success stories and testimonials for HRX CPAs. See how we've helped businesses and individuals with tax planning, CFO services, and financial growth in Orange County." />
         <link rel="canonical" href="https://hrxcpas.com/testimonials" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Client Testimonials | Success Stories | HRX CPAs Reviews" />
+        <meta property="og:description" content="Read client success stories and testimonials for HRX CPAs. See how we've helped businesses and individuals with tax planning, CFO services, and financial growth in Orange County." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hrxcpas.com/testimonials" />
+        <meta property="og:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="HRX CPAs" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Client Testimonials | Success Stories | HRX CPAs Reviews" />
+        <meta name="twitter:description" content="Read client success stories and testimonials for HRX CPAs. See how we've helped businesses with tax planning, CFO services, and financial growth." />
+        <meta name="twitter:image" content="https://hrxcpas.com/assets/hrx-logo.png" />
+        <meta name="twitter:image:alt" content="HRX CPAs Client Testimonials and Reviews" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="HRX CPAs" />
+        <meta name="theme-color" content="#1e40af" />
       </Helmet>
       <div className="min-h-screen bg-background">
       <Header />
