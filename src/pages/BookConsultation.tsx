@@ -265,15 +265,11 @@ const BookConsultation = () => {
                   </p>
                   
                   <div className="space-y-4">
-                    {whoShouldAttend.map((attendee, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="flex-shrink-0 mt-1">
-                          {attendee.recommended ? (
-                            <CheckCircle className="w-5 h-5 text-primary" />
-                          ) : (
-                            <div className="w-5 h-5 border-2 border-muted rounded-full"></div>
-                          )}
-                        </div>
+                     {whoShouldAttend.map((attendee, index) => (
+                       <div key={index} className="flex items-start gap-3">
+                         <div className="flex-shrink-0 mt-1">
+                           <CheckCircle className="w-5 h-5 text-primary" />
+                         </div>
                         <div>
                           <h4 className="font-semibold text-foreground text-sm">
                             {attendee.role}
