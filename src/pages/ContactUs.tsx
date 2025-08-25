@@ -159,24 +159,31 @@ const ContactUs = () => {
                 </div>
 
                 <Card className="card-elegant overflow-hidden">
-                  <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
-                    style={{width: '100%', height: '716px', border: 'none', borderRadius: '15px'}}
-                    id="inline-kLopwZyWToh3Mfk6dT32" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Contact Us Form (on the website)"
-                    data-height="716"
-                    data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
-                    data-form-id="kLopwZyWToh3Mfk6dT32"
-                    title="Contact Us Form (on the website)"
-                  ></iframe>
-                  <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
+                  <div className="w-full" style={{ minHeight: '716px' }}>
+                    <iframe
+                      src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
+                      style={{width: '100%', height: '716px', border: 'none', borderRadius: '15px'}}
+                      id="inline-kLopwZyWToh3Mfk6dT32" 
+                      data-layout="{'id':'INLINE'}"
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="Contact Us Form (on the website)"
+                      data-height="716"
+                      data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
+                      data-form-id="kLopwZyWToh3Mfk6dT32"
+                      title="Contact Us Form (on the website)"
+                      onError={() => console.log('Form widget failed to load')}
+                    ></iframe>
+                    <script 
+                      src="https://link.msgsndr.com/js/form_embed.js" 
+                      defer
+                      onError={() => console.log('Form script failed to load')}
+                    ></script>
+                  </div>
                 </Card>
               </div>
 

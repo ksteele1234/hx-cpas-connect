@@ -197,6 +197,7 @@ const BookConsultation = () => {
                       scrolling="no" 
                       id="LSC09oG5ynpJHXJKysin_1756073382852"
                       title="Book Consultation with Hiren Parmer"
+                      onError={() => console.log('Booking widget failed to load')}
                     ></iframe>
                   </div>
                 </Card>
