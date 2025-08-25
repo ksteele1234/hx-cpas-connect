@@ -190,15 +190,17 @@ const BookConsultation = () => {
 
                 {/* Calendar Embed */}
                 <Card className="card-elegant p-6">
-                  <div className="w-full min-h-[600px]">
-                    <iframe 
-                      src="https://api.leadconnectorhq.com/widget/booking/LSC09oG5ynpJHXJKysin" 
-                      style={{width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px'}} 
-                      scrolling="no" 
-                      id="LSC09oG5ynpJHXJKysin_1756073382852"
-                      title="Book Consultation with Hiren Parmer"
-                      onError={() => console.log('Booking widget failed to load')}
-                    ></iframe>
+                  <div className="w-full min-h-[400px] flex items-center justify-center text-center">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4">Booking Widget Temporarily Unavailable</h3>
+                      <p className="text-muted-foreground mb-6">Please call us directly to schedule your consultation.</p>
+                      <Button asChild>
+                        <a href="tel:(949) 431-0469">
+                          <Phone className="w-4 h-4 mr-2" />
+                          Call (949) 431-0469
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </Card>
 
