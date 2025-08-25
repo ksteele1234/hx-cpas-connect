@@ -27,6 +27,10 @@ import BusinessValuation from "./pages/services/BusinessValuation";
 import ExitPlanning from "./pages/services/ExitPlanning";
 import FullServiceAccountingPayroll from "./pages/services/FullServiceAccountingPayroll";
 import BuyerDueDiligence from "./pages/services/BuyerDueDiligence";
+import IndividualTaxPreparation from "./pages/services/IndividualTaxPreparation";
+import RSUEquityPlanning from "./pages/services/RSUEquityPlanning";
+import RentalK1Support from "./pages/services/RentalK1Support";
+import PersonalEstatePlanning from "./pages/services/PersonalEstatePlanning";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -63,6 +67,11 @@ const App = () => (
           <Route path="/services/exit-planning" element={<ExitPlanning />} />
           <Route path="/services/full-service-accounting-payroll" element={<FullServiceAccountingPayroll />} />
           <Route path="/services/buyer-due-diligence" element={<BuyerDueDiligence />} />
+          {/* Personal Service Pages */}
+          <Route path="/services/individual-tax-preparation" element={<IndividualTaxPreparation />} />
+          <Route path="/services/rsu-equity-planning" element={<RSUEquityPlanning />} />
+          <Route path="/services/rental-k1-support" element={<RentalK1Support />} />
+          <Route path="/services/personal-estate-planning" element={<PersonalEstatePlanning />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
