@@ -167,19 +167,23 @@ const PersonalServices = () => {
                 };
                 
                 return (
-                  <Card key={service.id} className="card-elegant p-6 text-center group hover:shadow-lg transition-all duration-300">
-                    <div className="mb-4">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{service.subtitle}</p>
-                    <Button variant="outline" size="sm" className="btn-outline group-hover:btn-primary" asChild>
-                      <Link to={serviceLinks[service.id as keyof typeof serviceLinks]}>
+                  <Link 
+                    key={service.id} 
+                    to={serviceLinks[service.id as keyof typeof serviceLinks]}
+                    className="block"
+                  >
+                    <Card className="card-elegant p-6 text-center group hover:shadow-lg cursor-pointer transition-all duration-300">
+                      <div className="mb-4">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-4">{service.subtitle}</p>
+                      <div className="text-primary font-semibold text-sm flex items-center justify-center">
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </Button>
-                  </Card>
+                      </div>
+                    </Card>
+                  </Link>
                 );
               })}
             </div>

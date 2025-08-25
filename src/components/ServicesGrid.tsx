@@ -64,42 +64,40 @@ const ServicesGrid = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card 
+            <Link 
               key={service.title} 
-              className="card-service group animate-fade-in" 
-              style={{ animationDelay: `${index * 0.1}s` }}
+              to={service.href}
+              className="block"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    {service.icon}
+              <Card 
+                className="card-service group animate-fade-in hover:shadow-lg cursor-pointer transition-all duration-300" 
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      {service.icon}
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
-                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {service.outcome}
-                  </p>
-                </div>
-                
-                <div className="pt-4">
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="text-primary hover:text-primary-foreground hover:bg-primary p-0 h-auto font-semibold"
-                    asChild
-                  >
-                    <Link to={service.href}>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.outcome}
+                    </p>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <div className="text-primary hover:text-primary-foreground font-semibold text-sm">
                       Learn More →
-                    </Link>
-                  </Button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
