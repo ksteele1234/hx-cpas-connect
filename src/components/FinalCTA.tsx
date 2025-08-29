@@ -36,8 +36,7 @@ const FinalCTA = () => {
               <Button 
                 asChild
                 size="lg" 
-                variant="outline"
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary group px-8 py-4 text-lg font-semibold"
+                className="border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary group px-8 py-4 text-lg font-semibold"
               >
                 <Link to="/contact">
                   <MessageCircle className="w-5 h-5 mr-2" />
