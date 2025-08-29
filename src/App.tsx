@@ -16,6 +16,7 @@ import Testimonials from "./pages/Testimonials";
 import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import BlogImport from "./pages/BlogImport";
 import ADACompliance from "./pages/ADACompliance";
 import Sitemap from "./pages/Sitemap";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -106,6 +107,7 @@ const App = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/admin/blog-import" element={<BlogImport />} />
             <Route path="/ada-compliance" element={<ADACompliance />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
