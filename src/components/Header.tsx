@@ -178,7 +178,7 @@ const Header = () => {
                 asChild
               >
                 <a 
-                  href="https://login.qount.io/hrx?rd=https://hrx.qount.io&org=hrx"
+                  href="https://app2.gettruss.io/client-portal/hrxcpas"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -309,7 +309,7 @@ const Header = () => {
                   asChild
                 >
                   <a 
-                    href="https://login.qount.io/hrx?rd=https://hrx.qount.io&org=hrx"
+                    href="https://app2.gettruss.io/client-portal/hrxcpas"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
