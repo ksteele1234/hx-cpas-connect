@@ -84,10 +84,14 @@ export default defineConfig(({ mode }) => ({
       'lucide-react',
       '@radix-ui/react-accordion',
       '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu'
+      '@radix-ui/react-dropdown-menu',
+      'buffer'
     ],
     // Exclude heavy dependencies from optimization
     exclude: ['@tanstack/react-query']
+  },
+  define: {
+    global: 'globalThis',
   },
   // CSS preprocessing
   css: {

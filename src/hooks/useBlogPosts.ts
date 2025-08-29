@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 import matter from 'gray-matter';
+import { Buffer } from 'buffer';
+
+// Polyfill Buffer for browser environment
+if (typeof window !== 'undefined') {
+  window.Buffer = Buffer;
+}
 
 export interface BlogPost {
   slug: string;
