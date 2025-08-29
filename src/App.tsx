@@ -37,6 +37,7 @@ import IndividualTaxPreparation from "./pages/services/IndividualTaxPreparation"
 import RSUEquityPlanning from "./pages/services/RSUEquityPlanning";
 import RentalK1Support from "./pages/services/RentalK1Support";
 import PersonalEstatePlanning from "./pages/services/PersonalEstatePlanning";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 // Declare global type for Netlify Identity widget
@@ -130,6 +131,7 @@ const App = () => {
             <Route path="/services/rsu-equity-planning" element={<RSUEquityPlanning />} />
             <Route path="/services/rental-k1-support" element={<RentalK1Support />} />
             <Route path="/services/personal-estate-planning" element={<PersonalEstatePlanning />} />
+            <Route path="/admin" element={<Admin />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
