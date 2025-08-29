@@ -32,13 +32,8 @@ const HeroSection = () => {
               <Button 
                 asChild
                 size="lg" 
-                variant="outline" 
-                className="border-2 border-primary bg-white animate-scale-in"
-                style={{ 
-                  animationDelay: "0.2s",
-                  color: '#1e40af !important',
-                  backgroundColor: 'white !important'
-                }}
+                className="border-2 border-primary bg-white text-primary hover:bg-white hover:text-primary animate-scale-in"
+                style={{ animationDelay: "0.2s" }}
               >
                 <Link to="/business-services">Explore Services</Link>
               </Button>
