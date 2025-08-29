@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export interface BlogPost {
   slug: string;
@@ -18,7 +18,7 @@ export interface BlogPost {
 }
 
 export const useBlogPosts = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([
+  const [posts] = useState<BlogPost[]>([
     {
       slug: "2025-01-15-tax-planning-strategies-high-income-professionals",
       title: "2025 Tax Planning Strategies for High-Income Professionals",
@@ -116,7 +116,8 @@ export const useBlogPosts = () => {
       content: "# Small Business Tax Deductions You Might Be Missing\n\nSmall business owners often focus on obvious deductions..."
     }
   ]);
-  const [loading, setLoading] = useState(false);
+  
+  const [loading] = useState(false);
 
   return { posts, loading };
 };
