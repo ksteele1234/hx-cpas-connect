@@ -26,8 +26,10 @@ export const useBlogPosts = () => {
   useEffect(() => {
     const loadPosts = async () => {
       try {
+        console.log('Loading blog posts...');
         // Import all markdown files from content/blog
-        const postFiles = import.meta.glob('/content/blog/*.md', { as: 'raw' });
+        const postFiles = import.meta.glob('../content/blog/*.md', { as: 'raw' });
+        console.log('Found post files:', Object.keys(postFiles));
         
         const loadedPosts = await Promise.all(
           Object.entries(postFiles).map(async ([path, loader]) => {
