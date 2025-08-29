@@ -20,6 +20,32 @@ export interface BlogPost {
 export const useBlogPosts = () => {
   const [posts] = useState<BlogPost[]>([
     {
+      slug: "2025-08-29-test",
+      title: "Test",
+      date: "2025-08-29",
+      author: "HRX CPAs Team",
+      category: "Business Growth",
+      featuredImage: "/images/blog/estate-planning-multi-generational.jpg",
+      imageAlt: "sdf",
+      excerpt: "sdff",
+      seoTitle: "sdfs",
+      metaDescription: "sfdf",
+      tags: ["sfd"],
+      readingTime: "5 min read",
+      featured: false,
+      content: `# Test
+
+sdfag gad
+
+## Frequently Asked Questions
+
+### Q: What is this test post about?
+A: This is a test blog post created to verify the blog functionality is working correctly.
+
+### Q: How can I create more blog posts?
+A: You can create blog posts through the CMS admin interface or by adding them to the useBlogPosts hook.`
+    },
+    {
       slug: "2025-01-15-tax-planning-strategies-high-income-professionals",
       title: "2025 Tax Planning Strategies for High-Income Professionals",
       date: "2025-01-15",
