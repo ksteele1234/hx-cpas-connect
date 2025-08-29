@@ -19,12 +19,12 @@
     <!-- Note: no lovable.js here; Vite serves the app bundle -->
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self';
-                   script-src 'self' 'unsafe-inline';
+                   script-src 'self' 'unsafe-inline' https://identity.netlify.com;
                    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                    font-src 'self' https://fonts.gstatic.com;
                    img-src 'self' data: https:;
                    frame-src 'self' https://www.google.com https://api.leadconnectorhq.com;
-                   connect-src 'self' https://api.leadconnectorhq.com;">
+                   connect-src 'self' https://api.leadconnectorhq.com https://identity.netlify.com;">
 
     <!-- Preconnect + dns-prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -96,6 +96,9 @@
       "serviceArea": { "@type": "Place", "name": "Orange County, California" }
     }
     </script>
+
+    <!-- Netlify Identity Widget for Blog CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <!-- Optional build stamp -->
     <meta name="build-timestamp" content="2025-08-25T17:58:00Z">
