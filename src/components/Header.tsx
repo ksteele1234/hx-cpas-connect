@@ -178,7 +178,7 @@ const Header = () => {
                 asChild
               >
                 <a 
-                  href="https://app2.gettruss.io/client-portal/hrxcpas"
+                  href="https://app2.gettruss.io/client-portal/hrxcpas?v=2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -309,7 +309,7 @@ const Header = () => {
                   asChild
                 >
                   <a 
-                    href="https://app2.gettruss.io/client-portal/hrxcpas"
+                    href="https://app2.gettruss.io/client-portal/hrxcpas?v=2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
