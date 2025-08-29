@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { format, parseISO, isFuture } from 'date-fns';
 
 export interface BlogPost {
   slug: string;
@@ -18,135 +17,39 @@ export interface BlogPost {
   content: string;
 }
 
-// Simple frontmatter parser that works in the browser
-const parseFrontmatter = (content: string) => {
-  const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
-  const match = content.match(frontmatterRegex);
-  
-  if (!match) {
-    return { data: {}, content };
-  }
-  
-  const frontmatter = match[1];
-  const body = match[2];
-  
-  const data: any = {};
-  
-  // Parse YAML-like frontmatter
-  frontmatter.split('\n').forEach(line => {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex > 0) {
-      const key = line.substring(0, colonIndex).trim();
-      let value: any = line.substring(colonIndex + 1).trim();
-      
-      // Remove quotes
-      if ((value.startsWith('"') && value.endsWith('"')) || 
-          (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.slice(1, -1);
-      }
-      
-      // Convert boolean strings
-      if (value === 'true') value = true;
-      if (value === 'false') value = false;
-      
-      // Handle arrays (basic support)
-      if (value.startsWith('[') && value.endsWith(']')) {
-        value = value.slice(1, -1).split(',').map(item => item.trim().replace(/['"]/g, ''));
-      }
-      
-      data[key] = value;
-    }
-  });
-  
-  return { data, content: body };
-};
-
 export const useBlogPosts = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadPosts = async () => {
-      try {
-        console.log('Loading blog posts...');
-        
-        // Try different path patterns
-        const patterns = [
-          '/content/blog/*.md',
-          '../content/blog/*.md',
-          '/src/content/blog/*.md',
-          './content/blog/*.md',
-          'content/blog/*.md'
-        ];
-        
-        let postFiles: Record<string, () => Promise<string>> = {};
-        
-        for (const pattern of patterns) {
-          try {
-            postFiles = import.meta.glob(pattern, { as: 'raw' }) as Record<string, () => Promise<string>>;
-            console.log(`Pattern ${pattern}:`, Object.keys(postFiles));
-            
-            if (Object.keys(postFiles).length > 0) {
-              console.log('Found files with pattern:', pattern);
-              break;
-            }
-          } catch (error) {
-            console.log(`Pattern ${pattern} failed:`, error);
-          }
-        }
-        
-        if (Object.keys(postFiles).length === 0) {
-          console.log('No markdown files found. Check your file structure.');
-          setLoading(false);
-          return;
-        }
-        
-        const loadedPosts = await Promise.all(
-          Object.entries(postFiles).map(async ([path, loader]) => {
-            try {
-              const content = await loader();
-              const { data, content: markdown } = parseFrontmatter(content);
-              
-              // Extract slug from filename
-              const slug = path.split('/').pop()?.replace('.md', '') || '';
-              
-              // Only include posts that are published (not future-dated)
-              if (data.date) {
-                const postDate = parseISO(data.date);
-                if (isFuture(postDate)) {
-                  return null; // Skip future posts
-                }
-              }
-              
-              return {
-                slug,
-                ...data,
-                content: markdown,
-                date: data.date ? format(parseISO(data.date), 'yyyy-MM-dd') : new Date().toISOString().split('T')[0]
-              } as BlogPost;
-            } catch (error) {
-              console.error(`Error loading post ${path}:`, error);
-              return null;
-            }
-          })
-        );
-
-        // Filter out null values and sort by date
-        const publishedPosts = loadedPosts
-          .filter(post => post !== null)
-          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-        console.log('Loaded posts:', publishedPosts);
-        setPosts(publishedPosts);
-      } catch (error) {
-        console.error('Error loading blog posts:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadPosts();
-  }, []);
+  const [posts, setPosts] = useState<BlogPost[]>([
+    {
+      slug: "2025-tax-planning-strategies-high-income-professionals",
+      title: "2025 Tax Planning Strategies for High-Income Professionals",
+      date: "2025-01-15",
+      author: "Hiram Parmar, CPA",
+      category: "Tax Planning",
+      featuredImage: "/images/blog/tax-planning-high-income-professionals.jpg",
+      imageAlt: "Professional reviewing tax planning documents",
+      excerpt: "Maximize your tax savings with strategic planning techniques specifically designed for executives, entrepreneurs, and high-earning professionals in 2025.",
+      seoTitle: "2025 Tax Planning Strategies for High-Income Professionals | HRX CPAs",
+      metaDescription: "Discover proven tax planning strategies for high-income professionals in 2025. Expert CPA advice on maximizing deductions and tax-efficient investments.",
+      tags: ["tax planning", "high income", "tax strategies"],
+      readingTime: "8 min read",
+      featured: true,
+      content: "# 2025 Tax Planning Strategies for High-Income Professionals\n\nHigh-income professionals face unique tax challenges that require sophisticated planning strategies..."
+    },
+    {
+      slug: "rd-tax-credits-tech-companies",
+      title: "R&D Tax Credits: Hidden Opportunities for Tech Companies",
+      date: "2025-01-12",
+      author: "HRX CPAs Team",
+      category: "Business Growth",
+      featuredImage: "/images/blog/rd-tax-credits-tech-companies.jpg",
+      imageAlt: "Technology innovation and development",
+      excerpt: "Learn how software companies can claim substantial R&D tax credits, including common qualifying activities and documentation requirements.",
+      readingTime: "6 min read",
+      featured: false,
+      content: "# R&D Tax Credits: Hidden Opportunities for Tech Companies\n\nSoftware companies often overlook valuable R&D tax credit opportunities..."
+    }
+  ]);
+  const [loading, setLoading] = useState(false);
 
   return { posts, loading };
 };
