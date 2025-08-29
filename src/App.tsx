@@ -72,14 +72,6 @@ const ScrollToTop = () => {
   return null;
 };
 
-// Component to handle admin redirect
-const AdminRedirect = () => {
-  useEffect(() => {
-    window.location.href = "/admin/";
-  }, []);
-  
-  return <div>Redirecting to admin...</div>;
-};
 
 const App = () => {
   // Add this useEffect to handle Netlify Identity
@@ -116,14 +108,6 @@ const App = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route 
-              path="/admin" 
-              element={<AdminRedirect />}
-            />
-            <Route 
-              path="/admin/*" 
-              element={<AdminRedirect />}
-            />
             <Route path="/admin/blog-import" element={<BlogImport />} />
             <Route path="/ada-compliance" element={<ADACompliance />} />
             <Route path="/sitemap" element={<Sitemap />} />
