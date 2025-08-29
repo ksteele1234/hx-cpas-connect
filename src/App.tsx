@@ -38,6 +38,16 @@ import RentalK1Support from "./pages/services/RentalK1Support";
 import PersonalEstatePlanning from "./pages/services/PersonalEstatePlanning";
 import NotFound from "./pages/NotFound";
 
+// Declare global type for Netlify Identity widget
+declare global {
+  interface Window {
+    netlifyIdentity?: {
+      on: (event: string, callback: (user?: any) => void) => void;
+      init: () => void;
+    };
+  }
+}
+
 const queryClient = new QueryClient();
 
 // Component to handle scroll to top on route change
@@ -62,6 +72,18 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
+  // Add this useEffect to handle Netlify Identity
+  useEffect(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user?: any) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  }, []);
   
   return (
     <QueryClientProvider client={queryClient}>
