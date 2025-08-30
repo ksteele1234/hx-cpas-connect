@@ -40,7 +40,7 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       
       // Only include posts that have a valid date (but show all statuses)
       const postDate = new Date(data.date);
-      const status = data.status || 'published';
+      const status = data.status || 'Published';
       
       // Include all posts regardless of status or publication date
       posts.push({
