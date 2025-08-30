@@ -88,103 +88,107 @@ const Header = () => {
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigationLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group"
+            {/* Right side navigation and buttons */}
+            <div className="flex items-center gap-6">
+
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-6">
+                {navigationLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group"
+                  >
+                    {link.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                ))}
+                
+                {/* Business Services Dropdown */}
+                <div className="relative group flex items-center gap-1">
+                  <Link 
+                    to="/business-services"
+                    className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative"
+                  >
+                    Business Services
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className="p-1 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                      <ChevronDown className="w-4 h-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
+                      {businessServices.map((service) => (
+                        <DropdownMenuItem key={service.name} asChild>
+                          <Link 
+                            to={service.href}
+                            className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
+                          >
+                            {service.name}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+
+                {/* Personal Services Dropdown */}
+                <div className="relative group flex items-center gap-1">
+                  <Link 
+                    to="/personal-services"
+                    className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative"
+                  >
+                    Personal & Family Services
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className="p-1 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                      <ChevronDown className="w-4 h-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
+                      {personalServices.map((service) => (
+                        <DropdownMenuItem key={service.name} asChild>
+                          <Link 
+                            to={service.href}
+                            className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
+                          >
+                            {service.name}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+
+                {/* End Navigation Links */}
+                {endNavigationLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group"
+                  >
+                    {link.name}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Client Portal Button (Desktop) */}
+              <div className="hidden lg:block">
+                <Button 
+                  className="text-white" 
+                  style={{ backgroundColor: 'rgb(109,160,202)', opacity: 1 }}
+                  asChild
                 >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
-              
-              {/* Business Services Dropdown */}
-              <div className="relative group flex items-center gap-1">
-                <Link 
-                  to="/business-services"
-                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative"
-                >
-                  Business Services
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="p-1 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    <ChevronDown className="w-4 h-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
-                    {businessServices.map((service) => (
-                      <DropdownMenuItem key={service.name} asChild>
-                        <Link 
-                          to={service.href}
-                          className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
-                        >
-                          {service.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                  <a 
+                    href="https://app2.gettruss.io/client-portal/hrxcpas?v=2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Client Portal
+                  </a>
+                </Button>
               </div>
-
-              {/* Personal Services Dropdown */}
-              <div className="relative group flex items-center gap-1">
-                <Link 
-                  to="/personal-services"
-                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative"
-                >
-                  Personal & Family Services
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <DropdownMenu>
-                  <DropdownMenuTrigger className="p-1 text-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    <ChevronDown className="w-4 h-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-64 bg-white shadow-lg border border-border z-50">
-                    {personalServices.map((service) => (
-                      <DropdownMenuItem key={service.name} asChild>
-                        <Link 
-                          to={service.href}
-                          className="w-full px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors cursor-pointer"
-                        >
-                          {service.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-
-              {/* End Navigation Links */}
-              {endNavigationLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-foreground hover:text-primary font-medium transition-colors duration-200 relative group"
-                >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
-            </nav>
-
-            {/* Client Portal Button (Desktop) */}
-            <div className="hidden lg:block">
-              <Button 
-                className="text-white" 
-                style={{ backgroundColor: 'rgb(109,160,202)', opacity: 1 }}
-                asChild
-              >
-                <a 
-                  href="https://app2.gettruss.io/client-portal/hrxcpas?v=2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Client Portal
-                </a>
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
