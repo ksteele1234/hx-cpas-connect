@@ -36,6 +36,10 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       const content = await modules[path]();
       const { data, content: body } = matter(content);
       
+      // Debug logging for frontmatter
+      console.log('Frontmatter status field:', data.status);
+      console.log('All frontmatter fields:', Object.keys(data));
+      
       // Extract slug from filename
       const filename = path.split('/').pop()?.replace('.md', '') || '';
       
