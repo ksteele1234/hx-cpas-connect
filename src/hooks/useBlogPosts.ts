@@ -21,6 +21,7 @@ export interface BlogPost {
   tags?: string[];
   readingTime: string;
   featured: boolean;
+  status: string;
   content: string;
 }
 
@@ -37,12 +38,13 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       // Extract slug from filename
       const filename = path.split('/').pop()?.replace('.md', '') || '';
       
-      // Only include posts that are published (date is today or earlier)
+      // Only include posts that are published (date is today or earlier and status is published)
       const postDate = new Date(data.date);
       const now = new Date();
       now.setHours(23, 59, 59, 999); // End of today
+      const status = data.status || 'published';
       
-      if (postDate <= now) {
+      if (postDate <= now && status === 'published') {
         posts.push({
           slug: filename,
           title: data.title || '',
@@ -57,6 +59,7 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
           tags: data.tags || [],
           readingTime: data.readingTime || '5 min read',
           featured: data.featured || false,
+          status: status,
           content: body,
         });
       }
