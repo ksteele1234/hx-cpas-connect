@@ -38,31 +38,28 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       // Extract slug from filename
       const filename = path.split('/').pop()?.replace('.md', '') || '';
       
-      // Only include posts that are published (date is today or earlier and status is published)
+      // Only include posts that have a valid date (but show all statuses)
       const postDate = new Date(data.date);
-      const now = new Date();
-      now.setHours(23, 59, 59, 999); // End of today
       const status = data.status || 'published';
       
-      if (postDate <= now && status === 'published') {
-        posts.push({
-          slug: filename,
-          title: data.title || '',
-          date: data.date || '',
-          author: data.author || 'HRX CPAs Team',
-          category: data.category || '',
-          featuredImage: data.featuredImage || '',
-          imageAlt: data.imageAlt || '',
-          excerpt: data.excerpt || '',
-          seoTitle: data.seoTitle,
-          metaDescription: data.metaDescription,
-          tags: data.tags || [],
-          readingTime: data.readingTime || '5 min read',
-          featured: data.featured || false,
-          status: status,
-          content: body,
-        });
-      }
+      // Include all posts regardless of status or publication date
+      posts.push({
+        slug: filename,
+        title: data.title || '',
+        date: data.date || '',
+        author: data.author || 'HRX CPAs Team',
+        category: data.category || '',
+        featuredImage: data.featuredImage || '',
+        imageAlt: data.imageAlt || '',
+        excerpt: data.excerpt || '',
+        seoTitle: data.seoTitle,
+        metaDescription: data.metaDescription,
+        tags: data.tags || [],
+        readingTime: data.readingTime || '5 min read',
+        featured: data.featured || false,
+        status: status,
+        content: body,
+      });
     } catch (error) {
       console.error(`Error processing blog post ${path}:`, error);
     }
