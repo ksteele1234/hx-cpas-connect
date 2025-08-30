@@ -39,10 +39,8 @@ const Header = () => {
   ];
 
   const endNavigationLinks = [
-    { name: "Blog", href: "/blog" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Admin", href: "/admin/blog-import" },
   ];
 
   return (
