@@ -21,7 +21,8 @@ export interface BlogPost {
   tags?: string[];
   readingTime: string;
   featured: boolean;
-  status: string;
+  status?: string;
+  published: boolean;
   content: string;
 }
 
@@ -40,7 +41,7 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       
       // Only include posts that have a valid date (but show all statuses)
       const postDate = new Date(data.date);
-      const status = data.status || 'Published';
+      const published = data.published || false;
       
       // Include all posts regardless of status or publication date
       posts.push({
@@ -57,7 +58,8 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
         tags: data.tags || [],
         readingTime: data.readingTime || '5 min read',
         featured: data.featured || false,
-        status: status,
+        status: data.status,
+        published: published,
         content: body,
       });
     } catch (error) {
