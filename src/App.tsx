@@ -46,6 +46,8 @@ declare global {
     netlifyIdentity?: {
       on: (event: string, callback: (user?: any) => void) => void;
       init: () => void;
+      currentUser: () => any;
+      open: () => void;
     };
   }
 }
