@@ -101,18 +101,15 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       const content = await modules[path]();
       const { data, content: body } = matter(content);
       
-      // Debug logging for frontmatter
-      console.log('Frontmatter status field:', data.status);
-      console.log('All frontmatter fields:', Object.keys(data));
       
       // Extract slug from filename
       const filename = path.split('/').pop()?.replace('.md', '') || '';
       
-      // Ensure we have a valid status field, default to 'published'
-      const status = data.status || 'published';
-      const published = data.published !== undefined ? data.published : true;
+      // With editorial workflow, only published posts exist in main branch
+      // Ensure we have a valid status field, default to 'published' since it's in main branch
+      const status = 'published'; // All posts in main branch are published via editorial workflow
       
-      // Include all posts regardless of status or publication date
+      // Only include posts that exist in main branch (they are published by definition)
       posts.push({
         slug: filename,
         title: data.title || '',
@@ -128,7 +125,7 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
         readingTime: data.readingTime || '5 min read',
         featured: data.featured || false,
         status: status,
-        published: published,
+        published: true, // All posts in main branch are published
         content: body,
       });
     } catch (error) {
