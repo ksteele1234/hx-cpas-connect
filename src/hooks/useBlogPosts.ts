@@ -43,9 +43,9 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
       // Extract slug from filename
       const filename = path.split('/').pop()?.replace('.md', '') || '';
       
-      // Only include posts that have a valid date (but show all statuses)
-      const postDate = new Date(data.date);
-      const published = data.published || false;
+      // Ensure we have a valid status field, default to 'published'
+      const status = data.status || 'published';
+      const published = data.published !== undefined ? data.published : true;
       
       // Include all posts regardless of status or publication date
       posts.push({
@@ -62,12 +62,13 @@ const importAllMarkdownFiles = async (): Promise<BlogPost[]> => {
         tags: data.tags || [],
         readingTime: data.readingTime || '5 min read',
         featured: data.featured || false,
-        status: data.status,
+        status: status,
         published: published,
         content: body,
       });
     } catch (error) {
       console.error(`Error processing blog post ${path}:`, error);
+      // Continue processing other posts even if one fails
     }
   }
   
