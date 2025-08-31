@@ -20,6 +20,7 @@ import BlogImport from "./pages/BlogImport";
 import ADACompliance from "./pages/ADACompliance";
 import Sitemap from "./pages/Sitemap";
 import SitemapXML from "./pages/SitemapXML";
+import RSSFeed from "./pages/RSSFeed";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ProfessionalDisclosures from "./pages/ProfessionalDisclosures";
@@ -115,6 +116,7 @@ const App = () => {
             <Route path="/ada-compliance" element={<ADACompliance />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/sitemap.xml" element={<SitemapXML />} />
+            <Route path="/rss.xml" element={<RSSFeed />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/professional-disclosures" element={<ProfessionalDisclosures />} />
