@@ -246,10 +246,10 @@ const ContactUs = () => {
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Email</h4>
                         <a 
-                          href="mailto:hiren.parmar@hrxcpas.com" 
+                          href="mailto:info@hrxcpas.com" 
                           className="text-primary hover:text-secondary transition-colors font-medium"
                         >
-                          hiren.parmar@hrxcpas.com
+                          info@hrxcpas.com
                         </a>
                         <p className="text-muted-foreground text-sm mt-1">
                           We respond within 4 business hours

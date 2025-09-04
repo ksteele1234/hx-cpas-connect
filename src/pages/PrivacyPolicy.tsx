@@ -233,7 +233,7 @@ const PrivacyPolicy = () => {
                   <div className="mt-4 p-3 bg-white rounded border">
                     <p className="text-sm text-muted-foreground">
                       <strong>To exercise these rights:</strong> Email us at 
-                      <a href="mailto:privacy@hrxcpas.com" className="text-primary ml-1">privacy@hrxcpas.com</a> or 
+                      <a href="mailto:info@hrxcpas.com" className="text-primary ml-1">info@hrxcpas.com</a> or
                       call <a href="tel:+19494310469" className="text-primary">(949) 431-0469</a>. 
                       We will verify your identity before processing requests.
                     </p>
@@ -309,8 +309,8 @@ const PrivacyPolicy = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                  <a href="mailto:hiren.parmar@hrxcpas.com" className="text-primary hover:text-primary/80">
-                    hiren.parmar@hrxcpas.com
+                  <a href="mailto:info@hrxcpas.com" className="text-primary hover:text-primary/80">
+                    info@hrxcpas.com
                   </a>
                 </div>
                 

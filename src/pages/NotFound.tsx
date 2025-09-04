@@ -150,10 +150,10 @@ const NotFound = () => {
                   Send us a message and we'll respond quickly
                 </p>
                 <a 
-                  href="mailto:hiren.parmar@hrxcpas.com" 
+                  href="mailto:info@hrxcpas.com" 
                   className="text-primary hover:text-primary/80 font-semibold"
                 >
-                  hiren.parmar@hrxcpas.com
+                  info@hrxcpas.com
                 </a>
               </Card>
             </div>
