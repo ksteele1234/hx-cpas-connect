@@ -168,9 +168,9 @@ const ContactUs = () => {
 
                 <Card className="card-elegant overflow-hidden">
                   <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/kLopwZyWToh3Mfk6dT32"
-                    style={{width: '100%', height: '800px', border: 'none', borderRadius: '15px'}}
-                    id="inline-kLopwZyWToh3Mfk6dT32" 
+                    src="https://api.leadconnectorhq.com/widget/form/OpZp15XvfGle32NwbQFt"
+                    style={{width: '100%', height: '100%', border: 'none', borderRadius: '3px'}}
+                    id="inline-OpZp15XvfGle32NwbQFt" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
                     data-trigger-value=""
@@ -178,15 +178,11 @@ const ContactUs = () => {
                     data-activation-value=""
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
-                    data-form-name="Contact Us Form (on the website)"
-                    data-height="800"
-                    data-layout-iframe-id="inline-kLopwZyWToh3Mfk6dT32"
-                    data-form-id="kLopwZyWToh3Mfk6dT32"
-                    title="Contact Us Form (on the website)"
-                    allow="clipboard-write; web-share"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
-                    onLoad={() => console.log('GHL iframe loaded successfully')}
-                    onError={() => console.error('Failed to load GHL iframe')}
+                    data-form-name="Website Contact Form"
+                    data-height="866"
+                    data-layout-iframe-id="inline-OpZp15XvfGle32NwbQFt"
+                    data-form-id="OpZp15XvfGle32NwbQFt"
+                    title="Website Contact Form"
                   ></iframe>
                 </Card>
               </div>
