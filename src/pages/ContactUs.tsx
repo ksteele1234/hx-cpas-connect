@@ -169,7 +169,7 @@ const ContactUs = () => {
                 <Card className="card-elegant overflow-hidden">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/OpZp15XvfGle32NwbQFt"
-                    style={{width: '100%', height: '900px', border: 'none', borderRadius: '3px'}}
+                    style={{width:'100%', height:'100%', border:'none', borderRadius:'3px'}}
                     id="inline-OpZp15XvfGle32NwbQFt" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
@@ -179,7 +179,7 @@ const ContactUs = () => {
                     data-deactivation-type="neverDeactivate"
                     data-deactivation-value=""
                     data-form-name="Website Contact Form"
-                    data-height="866"
+                    data-height="908"
                     data-layout-iframe-id="inline-OpZp15XvfGle32NwbQFt"
                     data-form-id="OpZp15XvfGle32NwbQFt"
                     title="Website Contact Form"
