@@ -169,7 +169,7 @@ const ContactUs = () => {
                 <Card className="card-elegant overflow-hidden">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/OpZp15XvfGle32NwbQFt"
-                    style={{width:'100%', height:'100%', border:'none', borderRadius:'3px'}}
+                    style={{width:'100%', height:'1200px', border:'none', borderRadius:'3px'}}
                     id="inline-OpZp15XvfGle32NwbQFt" 
                     data-layout="{'id':'INLINE'}"
                     data-trigger-type="alwaysShow"
