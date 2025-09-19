@@ -26,6 +26,7 @@ import TermsOfService from "./pages/TermsOfService";
 import ProfessionalDisclosures from "./pages/ProfessionalDisclosures";
 import CookiePolicy from "./pages/CookiePolicy";
 import ClientEngagementAgreement from "./pages/ClientEngagementAgreement";
+import ClientEngagementAgreementAlt from "./pages/ClientEngagementAgreementAlt";
 import ThankYou from "./pages/ThankYou";
 import Bookkeeping from "./pages/services/Bookkeeping";
 import TaxPlanningPrep from "./pages/services/TaxPlanningPrep";
@@ -121,7 +122,8 @@ const App = () => {
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/professional-disclosures" element={<ProfessionalDisclosures />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
-            <Route path="/client-engagement-agreement" element={<ClientEngagementAgreement />} />
+          <Route path="/client-engagement-agreement" element={<ClientEngagementAgreement />} />
+          <Route path="/client-engagement-agreement-alt" element={<ClientEngagementAgreementAlt />} />
             <Route path="/thank-you" element={<ThankYou />} />
             {/* Service Pages */}
             <Route path="/services/bookkeeping" element={<Bookkeeping />} />
