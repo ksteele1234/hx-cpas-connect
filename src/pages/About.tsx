@@ -179,7 +179,7 @@ const About = () => {
                     <div className="border-l-4 border-primary pl-6">
                       <div className="flex items-center gap-2 mb-2">
                         <Calendar className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium text-primary">2022 - Present</span>
+                        <span className="text-sm font-medium text-primary">2017 - Present</span>
                       </div>
                       <h4 className="text-lg font-semibold text-foreground">HRX CPAs Founder & President</h4>
                       <p className="text-muted-foreground text-sm">
