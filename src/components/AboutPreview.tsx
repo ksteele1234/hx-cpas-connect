@@ -39,7 +39,7 @@ const AboutPreview = () => {
               </h2>
               
               <p className="text-subtitle">
-                With over 20 years of experience serving Orange County businesses and families, 
+                With more than a decade of experience serving Orange County businesses and families, 
                 Hiren brings a unique blend of technical expertise and personalized service.
               </p>
             </div>

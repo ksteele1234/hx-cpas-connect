@@ -75,12 +75,12 @@ const ClientEngagementAgreementAlt = () => {
 
         {/* Form Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/KeM2LXidS0Fz1aQoazCF"
               style={{
                 width: '100%',
-                minHeight: '600px',
+                minHeight: '1000px',
                 border: 'none',
                 borderRadius: '10px'
               }}
