@@ -75,7 +75,7 @@ const ClientEngagementAgreementAlt = () => {
 
         {/* Form Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-screen-2xl mx-auto">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/KeM2LXidS0Fz1aQoazCF"
               style={{
